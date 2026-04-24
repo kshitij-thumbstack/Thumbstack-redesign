@@ -48,6 +48,7 @@ export default function Hero() {
                 src="/circle.png" 
                 alt="Decorative spinning circle" 
                 fill 
+                sizes="(max-width: 768px) 100px, 128px"
                 className="object-contain animate-[spin_20s_linear_infinite]"
               />
             </div>

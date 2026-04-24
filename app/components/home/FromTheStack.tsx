@@ -63,6 +63,7 @@ export default function FromTheStack() {
                   src={item.image} 
                   alt={item.title} 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 35vw"
                   className="object-cover transition-transform duration-700 group-hover/card:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover/card:bg-black/0 transition-colors" />

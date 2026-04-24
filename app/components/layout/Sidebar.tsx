@@ -100,7 +100,7 @@ export default function Sidebar() {
             <div className="flex flex-col gap-2 animate-[marquee-y-up_50s_linear_infinite] w-[220px]">
                {[...Array(6)].map((_, i) => (
                   <div key={i} className="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl shrink-0">
-                    <Image src={i % 2 === 0 ? "/Frame 2085663160.png" : "/Home.png"} alt="UI App" fill className="object-cover" />
+                    <Image src={i % 2 === 0 ? "/Frame 2085663160.png" : "/Home.png"} alt="UI App" fill sizes="(max-width: 768px) 220px, 220px" className="object-cover" />
                   </div>
                ))}
             </div>
@@ -109,7 +109,7 @@ export default function Sidebar() {
             <div className="flex flex-col gap-2 animate-[marquee-y-down_50s_linear_infinite] w-[220px] mt-[-500px]">
                {[...Array(6)].map((_, i) => (
                   <div key={i} className="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl shrink-0">
-                    <Image src={i % 2 === 0 ? "/Store 1.png" : "/Onboarding 7 (1) 1.png"} alt="UI App" fill className="object-cover" />
+                    <Image src={i % 2 === 0 ? "/Store 1.png" : "/Onboarding 7 (1) 1.png"} alt="UI App" fill sizes="(max-width: 768px) 220px, 220px" className="object-cover" />
                   </div>
                ))}
             </div>
