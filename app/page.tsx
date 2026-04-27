@@ -1,23 +1,27 @@
-import Hero from "./components/home/Hero";
-import FieldsOfPlay from "./components/home/FieldsOfPlay";
-import PartnerBrands from "./components/home/PartnerBrands";
-import Principles from "./components/home/Principles";
-import SqulioProject from "./components/home/SqulioProject";
-import WorkItem from "./components/home/WorkItem";
-import FromTheStack from "./components/home/FromTheStack";
-import LetsTalk from "./components/home/LetsTalk";
-import Footer from "./components/home/Footer";
+import Hero from "./components/all/Hero";
+import FieldsOfPlay from "./components/all/FieldsOfPlay";
+import PartnerBrands from "./components/all/PartnerBrands";
+import Principles from "./components/all/Principles";
+import BuildYourStack from "./components/all/BuildYourStack";
+import SqulioProject from "./components/all/SqulioProject";
+import BFTProject from "./components/all/BFTProject";
+import WorkItem from "./components/all/WorkItem";
+import FromTheStack from "./components/all/FromTheStack";
+import LetsTalk from "./components/all/LetsTalk";
+import Footer from "./components/all/Footer";
 
 export default function Home() {
   return (
-    <div className="h-[100svh] overflow-y-auto w-full snap-y snap-mandatory scroll-smooth relative">
+    <div className="w-full relative">
       <Hero />
       <SqulioProject />
+      <BFTProject />
       <FieldsOfPlay />
       <PartnerBrands />
       <Principles />
       <WorkItem />
       <FromTheStack />
+      <BuildYourStack />
       <LetsTalk />
       <Footer />
     </div>

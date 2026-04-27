@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "Designing and building meaningful digital experiences.",
 };
 
+import SmoothScroll from "./components/layout/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,11 +23,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-white overflow-x-hidden">
-        <main className="flex-1 flex flex-col bg-white">
-          {children}
-        </main>
+      <body className="min-h-full flex flex-col bg-white overflow-x-hidden" suppressHydrationWarning>
+        <SmoothScroll>
+          <main className="flex-1 flex flex-col bg-white">
+            {children}
+          </main>
+        </SmoothScroll>
       </body>
     </html>
   );

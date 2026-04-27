@@ -18,6 +18,15 @@
   --color-blue: var(--vibrant-blue);
   /* Use Inter as the default sans */
   --font-sans: var(--font-inter);
+
+  --animate-spin-pause: spin-pause-reverse 6s ease-in-out infinite;
+  @keyframes spin-pause-reverse {
+    0% { transform: rotate(0deg); }
+    35% { transform: rotate(360deg); }
+    50% { transform: rotate(360deg); }
+    85% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
 }
 
 body {
@@ -27,28 +36,49 @@ body {
 }
 
 @keyframes marquee-x {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes marquee-y-up {
-  0% { transform: translateY(0%); }
-  100% { transform: translateY(-50%); }
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
 }
 
 @keyframes marquee-y-down {
-  0% { transform: translateY(-50%); }
-  100% { transform: translateY(0%); }
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;

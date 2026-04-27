@@ -32,21 +32,21 @@ export default function FromTheStack() {
   ];
 
   return (
-    <section className="min-h-[100svh] w-full flex flex-col justify-center items-center py-20 px-8 lg:px-24 snap-start relative bg-white border-t border-gray-100 overflow-hidden">
+    <section className="min-h-screen w-full flex flex-col justify-center items-center py-20 px-6 md:px-12 lg:px-24 snap-start relative bg-white border-t border-gray-100 overflow-hidden">
       <div className="w-full max-w-[1400px] flex flex-col mb-12">
-        <div className="flex justify-between items-start w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start w-full gap-8">
           <div className="flex flex-col gap-4">
-            <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-sidebar">
+            <h2 className="text-[clamp(2.5rem,8vw,6rem)] font-bold tracking-tighter text-sidebar leading-none">
               From The Stack
             </h2>
-            <p className="text-sidebar/60 text-lg md:text-xl font-medium max-w-2xl">
+            <p className="text-sidebar/60 text-base md:text-xl font-medium max-w-2xl">
               Our latest launches, experiments, and thoughts on what&apos;s shaping design and technology.
             </p>
           </div>
-          <Link href="#" className="flex items-center gap-2 text-sidebar font-bold text-sm md:text-base hover:opacity-70 transition-opacity mt-4">
+          <Link href="#" className="flex items-center gap-2 text-sidebar font-bold text-xs md:text-base hover:opacity-70 transition-opacity mt-2 md:mt-4 shrink-0">
             Explore More
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>
         </div>
@@ -59,20 +59,20 @@ export default function FromTheStack() {
             <div key={`${item.id}-${idx}`} className="w-[85vw] md:w-[45vw] lg:w-[35vw] flex flex-col gap-6 shrink-0 relative">
               {/* Card Image Container */}
               <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden group/card shadow-lg">
-                <Image 
-                  src={item.image} 
-                  alt={item.title} 
-                  fill 
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 35vw"
                   className="object-cover transition-transform duration-700 group-hover/card:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover/card:bg-black/0 transition-colors" />
-                
+
                 {/* Logo Overlay */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-40 md:h-40 bg-white/95 rounded-[1.5rem] shadow-2xl flex items-center justify-center p-6 backdrop-blur-md">
-                   <div className="text-sidebar font-black text-xl md:text-2xl tracking-tighter text-center italic font-serif">
-                     {item.logo}
-                   </div>
+                  <div className="text-sidebar font-black text-xl md:text-2xl tracking-tighter text-center italic font-serif">
+                    {item.logo}
+                  </div>
                 </div>
 
                 {/* Drag Indicator (only for specific cards to match image) */}
@@ -99,7 +99,7 @@ export default function FromTheStack() {
                 <Link href="#" className="flex items-center gap-2 text-sidebar font-bold text-sm hover:underline w-fit">
                   Read Case Study
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>

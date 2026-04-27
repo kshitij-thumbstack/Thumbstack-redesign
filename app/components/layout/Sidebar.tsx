@@ -9,8 +9,8 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="absolute top-0 left-0 h-full w-[60px] md:w-[80px] bg-sidebar hover:bg-sidebar-hover transition-colors duration-300 z-40 flex flex-col justify-between items-center py-8">
-        <div className="flex-1 flex items-start justify-center mt-32">
+      <aside className="absolute top-0 left-0 h-full w-[50px] md:w-[70px] bg-sidebar hover:bg-sidebar-hover transition-colors duration-300 z-40 flex flex-col justify-between items-center py-8">
+        <div className="flex-1 flex items-start justify-center mt-16">
           <Link href="/">
             <h1 className="text-mint font-bold text-2xl tracking-tight -rotate-90 whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300">
               Thumbstack.
@@ -18,10 +18,11 @@ export default function Sidebar() {
           </Link>
         </div>
 
-        <div className="flex-none mb-4">
+        <div className="flex-none mb-24">
           <button 
             onClick={() => setMenuOpen(true)}
             className="flex flex-col gap-1.5 p-4 cursor-pointer focus:outline-none group items-start"
+            suppressHydrationWarning
           >
             <span className="block w-6 h-[2px] bg-mint group-hover:bg-white transition-colors duration-300"></span>
             <span className="block w-6 h-[2px] bg-mint group-hover:bg-white transition-colors duration-300"></span>
@@ -31,7 +32,7 @@ export default function Sidebar() {
       </aside>
 
       {/* Menu Overlay */}
-      <div className={`fixed inset-0 z-[100] grid grid-cols-1 md:grid-cols-[1.5fr_1fr] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className={`fixed inset-0 z-[100] grid grid-cols-1 md:grid-cols-[1.8fr_1fr] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         
         {/* Left Pane - Navigation */}
         <div className="bg-sidebar h-full w-full flex flex-col p-6 md:p-8 lg:p-10 relative overflow-y-auto scrollbar-hide">
@@ -43,14 +44,14 @@ export default function Sidebar() {
           </div>
 
           {/* Center Links - Typography matching Nohemi spec */}
-          <nav className="flex flex-col gap-2 mt-20 mb-auto pl-4 md:pl-8">
+          <nav className="flex flex-col gap-2 mt-20 mb-auto pl-8 md:pl-24">
             {["Fields Of Play", "Our Work", "News & Insights", "Service", "About Us"].map((item, idx) => (
               <Link 
                 key={idx} 
                 href="#" 
                 className="text-white font-medium tracking-normal hover:text-mint transition-colors w-fit leading-[1.33]"
                 style={{ 
-                  fontSize: 'clamp(48px, 5.8vw, 84.78px)',
+                  fontSize: 'clamp(32px, 4.8vw, 68px)',
                   fontWeight: 500
                 }}
               >
@@ -65,6 +66,7 @@ export default function Sidebar() {
             <button 
               onClick={() => setMenuOpen(false)}
               className="text-white hover:text-mint p-2 transition-colors cursor-pointer absolute bottom-2 left-2"
+              suppressHydrationWarning
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

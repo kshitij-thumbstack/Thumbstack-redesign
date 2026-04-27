@@ -48,7 +48,7 @@ export default function SqulioProject() {
             onClick={(e) => e.stopPropagation()}
           >
             <button 
-              className="absolute top-6 right-6 text-2xl text-sidebar hover:opacity-50"
+              className="absolute top-6 left-6 text-2xl text-sidebar hover:opacity-50"
               onClick={() => setShowDetails(false)}
             >
               &times;
@@ -78,23 +78,23 @@ export default function SqulioProject() {
       )}
 
       {/* Spaced out image placements with auto-scrolling mobile columns */}
-      <div className="relative w-full h-[80%] mt-4 flex px-12 sm:px-16 md:px-24 gap-12 md:gap-24 opacity-90 hover:opacity-100 transition-opacity duration-500 overflow-hidden pointer-events-none">
+      <div className="relative w-full h-[70%] md:h-[80%] mt-4 flex px-6 sm:px-12 md:px-24 gap-12 md:gap-24 opacity-90 hover:opacity-100 transition-opacity duration-500 overflow-hidden pointer-events-none">
         
         {/* Left Column (Main Dashboard - Home.png) */}
-        <div className="w-[55%] h-[110%] shrink-0 relative rounded-t-[2.5rem] overflow-hidden shadow-2xl border-t-[10px] border-l-[10px] border-r-[10px] border-white/30">
+        <div className="w-full md:w-[55%] h-[90%] md:h-[110%] shrink-0 relative rounded-t-[1.5rem] md:rounded-t-[2.5rem] overflow-hidden shadow-2xl border-t-[6px] md:border-t-[10px] border-l-[6px] md:border-l-[10px] border-r-[6px] md:border-r-[10px] border-white/30">
            <Image 
              src="/Home.png" 
              alt="Squlio Dashboard" 
              fill 
              priority
              quality={100}
-             sizes="55vw" 
+             sizes="(max-width: 768px) 100vw, 55vw" 
              className="object-cover object-top" 
            />
         </div>
 
-        {/* Center-Right Column (Vertical Marquee Up) - Fixed small width */}
-        <div className="w-[220px] md:w-[260px] flex flex-col gap-8 md:gap-12 shrink-0 animate-[marquee-y-up_40s_linear_infinite]">
+        {/* Center-Right Column (Vertical Marquee Up) - Hidden on mobile */}
+        <div className="hidden lg:flex w-[220px] md:w-[260px] flex-col gap-8 md:gap-12 shrink-0 animate-[marquee-y-up_40s_linear_infinite]">
            {[...Array(4)].map((_, i) => (
              <div key={i} className="flex flex-col gap-8 md:gap-12">
                <div className="w-full aspect-[9/19] relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white/30">
@@ -107,8 +107,8 @@ export default function SqulioProject() {
            ))}
         </div>
 
-        {/* Far-Right Column (Vertical Marquee Down) - Fixed small width */}
-        <div className="w-[220px] md:w-[260px] flex flex-col gap-8 md:gap-12 shrink-0 animate-[marquee-y-down_40s_linear_infinite]">
+        {/* Far-Right Column (Vertical Marquee Down) - Hidden on mobile */}
+        <div className="hidden xl:flex w-[220px] md:w-[260px] flex-col gap-8 md:gap-12 shrink-0 animate-[marquee-y-down_40s_linear_infinite]">
            {[...Array(4)].map((_, i) => (
              <div key={i} className="flex flex-col gap-8 md:gap-12">
                <div className="w-full aspect-[9/19] relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white/30">
@@ -125,36 +125,39 @@ export default function SqulioProject() {
 
       {/* Sticky Bottom Bar UI - Attached to bottom */}
       <div 
-        className="absolute bottom-0 left-0 right-0 md:left-8 md:right-8 bg-[#6462E7] md:rounded-t-[2.5rem] p-6 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_-20px_50px_rgba(0,0,0,0.15)] z-40 border-t border-l border-r border-[#8482F6] cursor-auto"
+        className="absolute bottom-0 left-0 right-0 md:left-8 md:right-8 bg-[#6462E7] md:rounded-t-[2.5rem] p-4 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-6 shadow-[0_-20px_50px_rgba(0,0,0,0.15)] z-40 border-t border-l border-r border-[#8482F6] cursor-auto"
         onClick={(e) => e.stopPropagation()} // Prevent opening details when clicking the bar
       >
         
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2 md:gap-3">
           <div className="flex gap-2">
             {["Design", "Technology", "AI"].map((tag) => (
               <span 
                 key={tag} 
-                className="px-4 py-1 border border-white/40 rounded-full text-white text-xs font-semibold tracking-wide"
+                className="px-3 md:px-4 py-0.5 md:py-1 border border-white/40 rounded-full text-white text-[10px] md:text-xs font-semibold tracking-wide"
               >
                 {tag}
               </span>
             ))}
           </div>
-          <h3 className="text-white text-3xl md:text-5xl font-bold tracking-tight">
+          <h3 className="text-white text-2xl md:text-5xl font-bold tracking-tight">
             Squlio
           </h3>
         </div>
 
-        <div className="flex items-center gap-4 md:gap-8 w-full md:w-auto justify-end">
-          <button className="px-6 py-3 bg-white text-sidebar font-bold rounded-xl text-sm hover:bg-gray-100 transition-colors shadow-sm">
+        <div className="flex items-center gap-4 md:gap-8 w-full md:w-auto justify-between md:justify-end">
+          <button 
+            className="px-5 md:px-6 py-2 md:py-3 bg-white text-sidebar font-bold rounded-xl text-xs md:text-sm hover:bg-gray-100 transition-colors shadow-sm"
+            suppressHydrationWarning
+          >
             Read Case Study
           </button>
           <Link 
             href="#" 
-            className="text-white font-bold text-sm flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="text-white font-bold text-xs md:text-sm flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             Visit Website
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5">
               <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>

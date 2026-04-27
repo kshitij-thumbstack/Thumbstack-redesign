@@ -12,15 +12,23 @@ export default function LetsTalk() {
       <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-8 lg:px-16 py-16 flex flex-col md:flex-row gap-16 md:gap-24 items-start">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24 py-16 flex flex-col lg:flex-row gap-12 md:gap-16 lg:gap-24 items-start">
         
         {/* Left Side - Headline */}
-        <div className="flex flex-col gap-8 md:w-2/5 pt-8">
-          <span className="text-gray-400 text-sm font-medium tracking-wide">Get in touch</span>
-          <h2 className="text-white text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9]">
+        <div className="flex flex-col gap-6 md:gap-8 lg:w-2/5 pt-8">
+          <span className="text-gray-400 text-xs md:text-sm font-medium tracking-wide uppercase">Get in touch</span>
+          <h2 
+            className="text-white font-medium tracking-tighter capitalize"
+            style={{
+              fontFamily: "Nohemi, sans-serif",
+              fontSize: "clamp(3.5rem, 10vw, 100.37px)",
+              lineHeight: "102px",
+              letterSpacing: "0%"
+            }}
+          >
             Lets<br />Create
           </h2>
-          <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-sm">
             Great products begin with simple conversations. Tell us what you&apos;re envisioning — the goals, the gaps, the sparks — and we&apos;ll come back with ideas, clarity, and a way forward that actually moves the needle.
           </p>
         </div>
@@ -35,6 +43,7 @@ export default function LetsTalk() {
                 type="text" 
                 placeholder="Anna"
                 className="bg-transparent border-b border-gray-600 text-white text-lg pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+                suppressHydrationWarning
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -43,6 +52,7 @@ export default function LetsTalk() {
                 type="text" 
                 placeholder="Louis"
                 className="bg-transparent border-b border-gray-600 text-white text-lg pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+                suppressHydrationWarning
               />
             </div>
           </div>
@@ -55,6 +65,7 @@ export default function LetsTalk() {
                 type="email" 
                 placeholder="Anna.Louis@Email.Com"
                 className="bg-transparent border-b border-gray-600 text-white text-lg pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+                suppressHydrationWarning
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -63,6 +74,7 @@ export default function LetsTalk() {
                 type="tel" 
                 placeholder="+91"
                 className="bg-transparent border-b border-gray-600 text-white text-lg pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+                suppressHydrationWarning
               />
             </div>
           </div>
@@ -74,11 +86,15 @@ export default function LetsTalk() {
               type="text" 
               placeholder="Tell Us About Your Project..."
               className="bg-transparent border-b border-gray-600 text-white text-lg pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+              suppressHydrationWarning
             />
           </div>
 
           {/* Submit Button */}
-          <button className="self-start mt-4 px-8 py-4 bg-blue hover:bg-blue/90 text-white rounded-full font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-lg">
+          <button 
+            className="self-start mt-4 px-8 py-4 bg-blue hover:bg-blue/90 text-white rounded-full font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-lg"
+            suppressHydrationWarning
+          >
             Talk to us
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
