@@ -20,7 +20,10 @@ export default function Hero() {
 
       {/* Main typography */}
       <div className="w-full max-w-[1400px] mx-auto flex-1 flex flex-col justify-center relative py-12">
-        <h1 className="text-[clamp(2.5rem,10vw,7rem)] leading-[1.05] tracking-tighter font-bold text-foreground max-w-[1200px]">
+        <h1 
+          className="text-[clamp(2.5rem,10vw,7rem)] leading-[1.05] tracking-tighter font-bold text-foreground max-w-[1200px]"
+          style={{ fontFamily: "var(--font-delight)" }}
+        >
           <span className="flex flex-wrap items-center gap-x-4">
             <span className="bg-mint text-blue px-2 pb-1 md:px-5 md:pb-3 rounded-none inline-block">Designing</span>
             <span className="text-blue">and</span>
@@ -32,10 +35,16 @@ export default function Hero() {
 
         <div className="mt-8 md:mt-12 flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-8">
           <div className="flex flex-col gap-2">
-            <p className="text-foreground font-medium text-base md:text-xl">
+            <p 
+              className="text-foreground font-medium text-sm md:text-base"
+              style={{ fontFamily: "var(--font-satoshi)" }}
+            >
               We Build The Remarkable, Not The Routine.
             </p>
-            <p className="text-foreground font-medium text-base md:text-xl">
+            <p 
+              className="text-foreground font-medium text-sm md:text-base"
+              style={{ fontFamily: "var(--font-satoshi)" }}
+            >
               Thoughtfully Crafted. <span className="text-blue">Bold In Execution.</span>
             </p>
           </div>

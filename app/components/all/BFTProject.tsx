@@ -35,7 +35,7 @@ export default function BFTProject() {
   const barBg = "#1E2E26";
 
   return (
-    <div ref={sectionRef} className="relative h-[200vh]">
+    <div ref={sectionRef} className="relative h-[200vh]" style={{ position: "relative" }}>
       <motion.div
         className="sticky top-0 h-screen w-full overflow-hidden shadow-[0_-50px_100px_rgba(0,0,0,0.35)]"
         style={{

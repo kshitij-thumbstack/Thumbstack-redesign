@@ -36,10 +36,33 @@ export default function FromTheStack() {
       <div className="w-full max-w-[1400px] flex flex-col mb-12">
         <div className="flex flex-col md:flex-row justify-between items-start w-full gap-8">
           <div className="flex flex-col gap-4">
-            <h2 className="text-[clamp(2.5rem,8vw,6rem)] font-bold tracking-tighter text-sidebar leading-none">
+            <h2
+              className="text-sidebar"
+              style={{
+                fontFamily: "var(--font-delight)",
+                fontWeight: 500,
+                fontStyle: "normal",
+                fontSize: "100.37px",
+                lineHeight: "134.2px",
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+                textTransform: "capitalize",
+              }}
+            >
               From The Stack
             </h2>
-            <p className="text-sidebar/60 text-base md:text-xl font-medium max-w-2xl">
+            <p
+              className="text-sidebar/60 max-w-2xl"
+              style={{
+                fontFamily: "var(--font-satoshi)",
+                fontWeight: 700,
+                fontStyle: "normal",
+                fontSize: "16px",
+                lineHeight: "30px",
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+              }}
+            >
               Our latest launches, experiments, and thoughts on what&apos;s shaping design and technology.
             </p>
           </div>
@@ -54,16 +77,29 @@ export default function FromTheStack() {
 
       {/* Auto-moving Carousel (Marquee) */}
       <div className="w-full relative flex overflow-hidden group">
-        <div className="flex gap-8 animate-[marquee-x_30s_linear_infinite] group-hover:[animation-play-state:paused] py-4">
+        <div className="flex gap-8 animate-[marquee-x_30s_linear_infinite] group-hover:[animation-play-state:paused] py-4 items-stretch">
           {[...stackItems, ...stackItems].map((item, idx) => (
-            <div key={`${item.id}-${idx}`} className="w-[85vw] md:w-[45vw] lg:w-[35vw] flex flex-col gap-6 shrink-0 relative">
+            <div 
+              key={`${item.id}-${idx}`} 
+              className={`flex flex-col gap-6 shrink-0 relative transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group/item
+                ${idx % 2 === 0 
+                  ? 'w-[639px]' 
+                  : 'w-[480px] hover:w-[639px]'
+                }
+              `}
+            >
               {/* Card Image Container */}
-              <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden group/card shadow-lg">
+              <div className={`relative rounded-[2rem] overflow-hidden group/card shadow-lg
+                ${idx % 2 === 0 
+                  ? 'w-[639px] h-[488px]' 
+                  : 'w-[480px] h-[366px] hover:w-[639px] hover:h-[488px]'
+                }
+              `}>
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 35vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 40vw"
                   className="object-cover transition-transform duration-700 group-hover/card:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover/card:bg-black/0 transition-colors" />

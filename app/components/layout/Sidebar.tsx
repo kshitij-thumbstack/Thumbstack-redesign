@@ -9,7 +9,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="absolute top-0 left-0 h-full w-[50px] md:w-[70px] bg-sidebar hover:bg-sidebar-hover transition-colors duration-300 z-40 flex flex-col justify-between items-center py-8">
+      <aside className="fixed top-0 left-0 h-full w-[50px] md:w-[70px] bg-sidebar hover:bg-sidebar-hover transition-colors duration-300 z-40 flex flex-col justify-between items-center py-8">
         <div className="flex-1 flex items-start justify-center mt-16">
           <Link href="/">
             <h1 className="text-mint font-bold text-2xl tracking-tight -rotate-90 whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300">
