@@ -36,10 +36,10 @@ export default function ProductDriven({ techItems }: { techItems: TechItem[] }) 
   ];
 
   return (
-    <section className="min-h-screen w-full bg-white relative flex flex-col items-center justify-center overflow-hidden py-20 px-6 snap-start">
+    <section className="min-h-screen w-full bg-white relative flex flex-col items-center justify-center overflow-hidden py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 lg:px-24 snap-start">
       
       {/* Background Floating Logos */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {techItems.map((item, i) => {
           const pos = positions[i % positions.length];
           const isActive = activeId === item.id;
@@ -60,18 +60,18 @@ export default function ProductDriven({ techItems }: { techItems: TechItem[] }) 
               }}
               onClick={() => setActiveId(isActive ? null : item.id)}
             >
-              <div className={`w-14 h-14 md:w-20 md:h-20 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex items-center justify-center p-4 border border-gray-100 transition-all duration-300 ${isActive ? 'scale-125 shadow-2xl border-blue/20 ring-4 ring-blue/5' : 'hover:scale-110 hover:shadow-xl'}`}>
+              <div className={`w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex items-center justify-center p-2 sm:p-3 md:p-4 border border-gray-100 transition-all duration-300 ${isActive ? 'scale-125 shadow-2xl border-blue/20 ring-4 ring-blue/5' : 'hover:scale-110 hover:shadow-xl'}`}>
                 {item.logo ? (
                   <Image 
                     src={getStrapiURL(item.logo.url)} 
                     alt={item.name} 
                     width={48} 
                     height={48} 
-                    className="object-contain"
+                    className="object-contain w-full h-full"
                     unoptimized
                   />
                 ) : (
-                  <span className="text-[10px] font-bold text-gray-400 tracking-tighter">{item.name.substring(0, 3)}</span>
+                  <span className="text-[8px] sm:text-[10px] font-bold text-gray-400 tracking-tighter">{item.name.substring(0, 3)}</span>
                 )}
               </div>
               
@@ -79,9 +79,9 @@ export default function ProductDriven({ techItems }: { techItems: TechItem[] }) 
                 <motion.div 
                   initial={{ opacity: 0, y: 10, scale: 0.8 }}
                   animate={{ opacity: 1, y: 12, scale: 1 }}
-                  className="absolute top-full mt-2 whitespace-nowrap"
+                  className="absolute top-full mt-1 sm:mt-2 whitespace-nowrap"
                 >
-                  <span className="text-[10px] md:text-xs font-bold text-sidebar bg-white px-3 py-1.5 rounded-full shadow-lg border border-gray-100">
+                  <span className="text-[8px] sm:text-xs font-bold text-sidebar bg-white px-2 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-lg border border-gray-100">
                     {item.name}
                   </span>
                 </motion.div>
@@ -101,7 +101,7 @@ export default function ProductDriven({ techItems }: { techItems: TechItem[] }) 
           style={{
             fontFamily: "var(--font-delight)",
             fontWeight: 500,
-            fontSize: "clamp(2.5rem, 8vw, 100.37px)",
+            fontSize: "clamp(2rem, 7vw, 100.37px)",
             lineHeight: "147.21px",
             letterSpacing: "0%",
             verticalAlign: "middle",

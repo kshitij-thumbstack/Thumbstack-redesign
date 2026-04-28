@@ -42,21 +42,21 @@ export default function FieldsOfPlay() {
   ];
 
   return (
-    <section className="min-h-[100svh] w-full flex flex-col justify-center items-center py-24 px-8 lg:px-24 snap-start relative bg-white overflow-hidden">
+    <section className="min-h-[100svh] w-full flex flex-col justify-center items-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 lg:px-24 snap-start relative bg-white overflow-hidden">
       <div className="w-full max-w-[1400px]">
         {/* Header Grid */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end w-full mb-20 relative gap-6 md:gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end w-full mb-12 sm:mb-16 md:mb-20 relative gap-4 sm:gap-6 md:gap-8">
           <div className="max-w-[200px]">
-            <p className="text-xs md:text-sm font-medium text-foreground uppercase tracking-tight">
+            <p className="text-xs sm:text-sm font-medium text-foreground uppercase tracking-tight">
               We build the remarkable, not the routine.
             </p>
           </div>
 
-          <div className="flex flex-col items-start md:items-end md:ml-auto">
-            <span className="text-xs md:text-sm font-semibold mb-2 flex items-center gap-1 cursor-pointer hover:opacity-70 transition-opacity">
+          <div className="flex flex-col items-start md:items-end md:ml-auto gap-2">
+            <span className="text-xs sm:text-sm font-semibold mb-2 flex items-center gap-1 cursor-pointer hover:opacity-70 transition-opacity">
               Let&apos;s Build Together <span className="text-lg">↗</span>
             </span>
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-sidebar">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-sidebar">
               Fields Of Play
             </h2>
           </div>
@@ -72,13 +72,13 @@ export default function FieldsOfPlay() {
               key={field.id}
               onMouseEnter={() => setActiveItem(field.id)}
               className={`w-full group cursor-pointer transition-all duration-500 relative ${activeItem === field.id
-                  ? 'bg-sidebar py-12 md:py-16 -mx-8 md:-mx-24 px-8 md:px-24 border-none shadow-2xl z-20'
-                  : 'bg-transparent py-8 md:py-10 border-b border-gray-100'
+                  ? 'bg-sidebar py-8 sm:py-12 md:py-16 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-24 px-4 sm:px-6 md:px-8 lg:px-24 border-none shadow-2xl z-20'
+                  : 'bg-transparent py-6 sm:py-8 md:py-10 border-b border-gray-100'
                 }`}
             >
-              <div className="flex items-center w-full md:w-1/2">
-                <div className="flex flex-col">
-                  <h3 className={`text-xl md:text-3xl font-medium tracking-tight transition-colors duration-300 ${activeItem === field.id ? 'text-white' : 'text-gray-400 group-hover:text-sidebar'}`}>
+              <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-1/2">
+                <div className="flex flex-col gap-2 sm:gap-3">
+                  <h3 className={`text-lg sm:text-2xl md:text-3xl font-medium tracking-tight transition-colors duration-300 ${activeItem === field.id ? 'text-white' : 'text-gray-400 group-hover:text-sidebar'}`}>
                     {field.title}
                   </h3>
 
@@ -88,7 +88,7 @@ export default function FieldsOfPlay() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="text-sm md:text-lg text-gray-300 mt-4 max-w-sm font-light overflow-hidden"
+                        className="text-xs sm:text-sm md:text-lg text-gray-300 mt-2 md:mt-4 max-w-sm font-light overflow-hidden"
                       >
                         {field.subtitle}
                       </motion.p>
@@ -105,9 +105,9 @@ export default function FieldsOfPlay() {
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 50, opacity: 0 }}
                     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                    className="md:absolute right-8 top-1/2 md:-translate-y-1/2 w-full md:w-[35%] flex justify-end mt-12 md:mt-0 md:pr-8 pointer-events-none"
+                    className="md:absolute right-4 sm:right-6 md:right-8 lg:right-8 top-1/2 md:-translate-y-1/2 w-full md:w-[35%] flex justify-end mt-8 md:mt-0 md:pr-4 sm:pr-6 md:pr-8 pointer-events-none"
                   >
-                    <div className="relative w-full aspect-[4/5] md:h-[420px] rounded-2xl overflow-hidden shadow-2xl z-20 pointer-events-auto border-4 border-white/10">
+                    <div className="relative w-full aspect-[4/5] md:h-[420px] rounded-lg sm:rounded-2xl overflow-hidden shadow-2xl z-20 pointer-events-auto border-4 border-white/10">
                       <Image
                         src={field.image}
                         alt={field.title}
@@ -126,7 +126,7 @@ export default function FieldsOfPlay() {
                         onDrag={(event, info) => {
                           setDragPosition({ x: info.offset.x, y: info.offset.y });
                         }}
-                        className="absolute bottom-6 left-1/2 -translate-x-1/2 w-20 h-20 md:w-28 md:h-28 bg-mint rounded-full flex justify-center items-center font-bold text-sidebar text-sm md:text-lg cursor-grab active:cursor-grabbing shadow-xl hover:scale-110 transition-transform z-30"
+                        className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 w-16 sm:w-20 md:w-28 h-16 sm:h-20 md:h-28 bg-mint rounded-full flex justify-center items-center font-bold text-sidebar text-xs sm:text-sm md:text-lg cursor-grab active:cursor-grabbing shadow-xl hover:scale-110 transition-transform z-30"
                       >
                         View
                       </motion.div>

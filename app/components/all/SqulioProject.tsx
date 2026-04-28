@@ -27,7 +27,7 @@ export default function SqulioProject() {
       {/* Custom Read Cursor */}
       {isHovering && !showDetails && (
         <div 
-          className="fixed pointer-events-none z-[100] w-20 h-20 bg-mint rounded-full flex items-center justify-center text-sidebar font-bold text-base shadow-2xl transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-75"
+          className="fixed pointer-events-none z-[100] w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 bg-mint rounded-full flex items-center justify-center text-sidebar font-bold text-xs sm:text-sm md:text-base shadow-2xl transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-75"
           style={{ left: cursorPos.x, top: cursorPos.y }}
         >
           Read
@@ -44,32 +44,32 @@ export default function SqulioProject() {
           }}
         >
           <div 
-            className="bg-white rounded-3xl p-8 md:p-12 w-full max-w-2xl shadow-2xl relative animate-in fade-in zoom-in duration-300"
+            className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 w-full max-w-2xl shadow-2xl relative animate-in fade-in zoom-in duration-300"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
-              className="absolute top-6 left-6 text-2xl text-sidebar hover:opacity-50"
+              className="absolute top-4 sm:top-6 left-4 sm:left-6 text-xl sm:text-2xl text-sidebar hover:opacity-50"
               onClick={() => setShowDetails(false)}
             >
               &times;
             </button>
-            <h4 className="text-blue font-bold text-sm tracking-widest uppercase mb-4">Squlio Project</h4>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-sidebar mb-6 leading-tight">
+            <h4 className="text-blue font-bold text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4">Squlio Project</h4>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-sidebar mb-4 sm:mb-6 leading-tight">
               Transforming Fintech Engagement
             </h2>
-            <p className="text-lg text-sidebar/70 font-medium mb-10">
+            <p className="text-xs sm:text-sm md:text-lg text-sidebar/70 font-medium mb-6 sm:mb-10">
               We partnered with Squlio to build a vibrant, gamified platform. From an intuitive onboarding flow to an engaging cashback dashboard, we transformed a complex fintech system into a delightful daily habit for users.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               {["Design", "Technology", "AI"].map((tag) => (
-                <span key={tag} className="px-4 py-2 bg-gray-100 rounded-lg text-sidebar font-semibold text-sm">
+                <span key={tag} className="px-3 sm:px-4 py-1 sm:py-2 bg-gray-100 rounded-lg text-sidebar font-semibold text-xs sm:text-sm">
                   {tag}
                 </span>
               ))}
             </div>
             
-            <div className="mt-8 pt-8 border-t border-gray-100 flex justify-end">
-               <Link href="#" className="px-8 py-3 bg-blue text-white font-bold rounded-xl text-sm hover:opacity-90 transition-opacity">
+            <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-100 flex justify-end">
+               <Link href="#" className="px-4 sm:px-8 py-2 sm:py-3 bg-blue text-white font-bold rounded-lg sm:rounded-xl text-xs sm:text-sm hover:opacity-90 transition-opacity">
                  Full Case Study
                </Link>
             </div>

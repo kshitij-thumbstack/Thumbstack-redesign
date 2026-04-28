@@ -97,17 +97,17 @@ export default function Principles() {
   return (
     <section
       ref={containerRef}
-      className="min-h-[80vh] w-full flex flex-col items-center justify-start md:justify-center snap-start relative bg-[#0B1510] text-white overflow-hidden pt-20 pb-0 md:pt-24 md:pb-0"
+      className="min-h-[80vh] w-full flex flex-col items-center justify-start md:justify-center snap-start relative bg-[#0B1510] text-white overflow-hidden pt-16 sm:pt-20 md:pt-24 pb-0"
     >
-      <div className="w-full max-w-[1400px] px-8 lg:px-24 flex flex-col z-10">
+      <div className="w-full max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-24 flex flex-col z-10">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start w-full relative mb-16 md:mb-24 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start w-full relative mb-12 sm:mb-16 md:mb-24 gap-6 sm:gap-8">
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-[clamp(2rem,6vw,4.5rem)] font-bold leading-[1.1] max-w-4xl tracking-tighter"
+            className="text-[clamp(1.75rem,5vw,4.5rem)] font-bold leading-[1.1] max-w-4xl tracking-tighter"
           >
             We Build Like It&apos;s Ours.<br />
             <span className="text-gray-400">No Shortcuts. No Templates.</span><br />
@@ -118,8 +118,8 @@ export default function Principles() {
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             className="flex flex-col items-start md:items-end gap-2 shrink-0"
           >
-            <span className="text-mint font-mono text-xs md:text-sm tracking-widest uppercase">Services</span>
-            <div className="h-[1px] w-16 md:w-24 bg-mint/30" />
+            <span className="text-mint font-mono text-xs sm:text-sm tracking-widest uppercase">Services</span>
+            <div className="h-[1px] w-12 sm:w-16 md:w-24 bg-mint/30" />
           </motion.div>
         </div>
 
@@ -129,7 +129,7 @@ export default function Principles() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-10%" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 md:gap-x-24 gap-y-16 md:gap-y-24 w-full"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 md:gap-x-12 lg:gap-x-24 gap-y-10 md:gap-y-24 w-full"
         >
           {principles.map((p, i) => (
             <motion.div
@@ -145,10 +145,10 @@ export default function Principles() {
 
               {/* Text */}
               <div className="flex flex-col gap-2">
-                <h3 className={`text-2xl md:text-3xl font-bold tracking-tight transition-colors ${activeCard === i ? 'text-mint' : 'text-white group-hover:text-mint'}`}>
+                <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold tracking-tight transition-colors ${activeCard === i ? 'text-mint' : 'text-white group-hover:text-mint'}`}>
                   {p.title}
                 </h3>
-                <p className="text-sm md:text-base text-[#8D9690] leading-relaxed max-w-[280px]">
+                <p className="text-xs sm:text-sm md:text-base text-[#8D9690] leading-relaxed max-w-[280px]">
                   {p.desc}
                 </p>
               </div>
@@ -158,12 +158,12 @@ export default function Principles() {
       </div>
 
       {/* Enhanced Marquee Banner */}
-      <div className="mt-12 md:mt-16 w-full py-3 md:py-4 bg-sidebar/50 backdrop-blur-sm relative z-20 overflow-hidden">
+      <div className="mt-10 sm:mt-12 md:mt-16 w-full py-2 sm:py-3 md:py-4 bg-sidebar/50 backdrop-blur-sm relative z-20 overflow-hidden">
         <div className="flex overflow-hidden">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
             transition={{
-              duration: 60, /* Slowed down from 20 */
+              duration: 60,
               repeat: Infinity,
               ease: "linear"
             }}
@@ -176,7 +176,7 @@ export default function Principles() {
                     {marqueeItems.map((item, k) => (
                       <span
                         key={k}
-                        className={`${k % 2 === 0 ? 'text-white/80' : 'text-mint/40'} font-bold text-xl md:text-4xl tracking-widest px-4 md:px-8 select-none flex items-center gap-4 md:gap-8`}
+                        className={`${k % 2 === 0 ? 'text-white/80' : 'text-mint/40'} font-bold text-sm sm:text-xl md:text-3xl lg:text-4xl tracking-widest px-2 sm:px-4 md:px-8 select-none flex items-center gap-2 sm:gap-4 md:gap-8`}
                       >
                         {item}
                         <span className="text-white/20">•</span>

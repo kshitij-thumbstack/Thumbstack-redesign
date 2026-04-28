@@ -40,11 +40,11 @@ export default function BuildYourStack() {
   // Common UI components for Steps 1-4
   const renderProgressBar = () => {
     return (
-      <div className="flex w-full gap-2 mb-12">
+      <div className="flex w-full gap-1.5 sm:gap-2 mb-8 sm:mb-10 md:mb-12">
         {[1, 2, 3, 4].map(s => (
           <div
             key={s}
-            className={`h-1 flex-1 rounded-full ${s <= step ? 'bg-sidebar' : 'bg-gray-200'}`}
+            className={`h-0.5 sm:h-1 flex-1 rounded-full ${s <= step ? 'bg-sidebar' : 'bg-gray-200'}`}
           />
         ))}
       </div>
@@ -53,39 +53,39 @@ export default function BuildYourStack() {
 
   const renderBottomNav = () => {
     return (
-      <div className="mt-auto pt-12 flex flex-col gap-6">
+      <div className="mt-auto pt-8 sm:pt-10 md:pt-12 flex flex-col gap-4 sm:gap-5 md:gap-6">
         {step < 4 && (
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-3 p-4 border border-gray-200 rounded-2xl bg-white">
+          <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4">
+            <div className="flex items-center gap-2 sm:gap-3 p-3 sm:p-4 border border-gray-200 rounded-lg sm:rounded-xl md:rounded-2xl bg-white">
               <input
                 type="text"
                 placeholder="Or just type it out — We want to redesign our e-commerce site and integrate loyalty rewards."
-                className="flex-1 outline-none text-sm"
+                className="flex-1 outline-none text-xs sm:text-sm md:text-base"
                 value={typedIdea}
                 onChange={(e) => setTypedIdea(e.target.value)}
               />
-              <button className="w-8 h-8 bg-blue text-white rounded-lg flex items-center justify-center shrink-0">
+              <button className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-blue text-white rounded-lg flex items-center justify-center shrink-0">
                 {/* Send icon */}
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg>
               </button>
             </div>
-            <div className="text-xs text-gray-500 bg-gray-50 p-4 rounded-xl flex items-center gap-2">
-              <span className="text-blue flex shrink-0 items-center justify-center w-4 h-4 border border-blue rounded-full text-[10px]">i</span>
+            <div className="text-[9px] sm:text-xs md:text-sm text-gray-500 bg-gray-50 p-2.5 sm:p-3 md:p-4 rounded-lg sm:rounded-xl flex items-center gap-2">
+              <span className="text-blue flex shrink-0 items-center justify-center w-3.5 h-3.5 sm:w-4 sm:h-4 border border-blue rounded-full text-[8px] sm:text-[10px]">i</span>
               Don&apos;t worry about the jargon — even &apos;I just need a cool website&apos; works great.
             </div>
           </div>
         )}
 
-        <div className="flex gap-4">
+        <div className="flex gap-2 sm:gap-3 md:gap-4">
           <button
             onClick={() => setStep(5)}
-            className="flex-1 py-4 border border-sidebar rounded-2xl font-semibold text-sidebar hover:bg-gray-50 transition-colors text-sm md:text-base"
+            className="flex-1 py-2.5 sm:py-3 md:py-4 border border-sidebar rounded-lg sm:rounded-xl md:rounded-2xl font-semibold text-sidebar hover:bg-gray-50 transition-colors text-xs sm:text-sm md:text-base"
           >
             Just want to talk?
           </button>
           <button
             onClick={() => step === 4 ? setStep(5) : handleNext()}
-            className="flex-[2] py-4 bg-sidebar text-white rounded-2xl font-semibold hover:bg-black transition-colors text-sm md:text-base"
+            className="flex-[2] py-2.5 sm:py-3 md:py-4 bg-sidebar text-white rounded-lg sm:rounded-xl md:rounded-2xl font-semibold hover:bg-black transition-colors text-xs sm:text-sm md:text-base"
           >
             {step === 4 ? "Let's Build" : 'Great, Next'}
           </button>
@@ -102,17 +102,17 @@ export default function BuildYourStack() {
             key="intro"
             exit={{ x: '-30%', opacity: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full min-h-[80vh] bg-[#95E7D3] flex flex-col items-center justify-center snap-start relative px-6 py-24"
+            className="w-full min-h-[80vh] bg-[#95E7D3] flex flex-col items-center justify-center snap-start relative px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 lg:py-32"
           >
-            <div className="flex flex-col items-center justify-center text-center max-w-4xl gap-6">
+            <div className="flex flex-col items-center justify-center text-center max-w-4xl gap-4 sm:gap-5 md:gap-6">
               <h2
-                className="font-medium text-sidebar capitalize"
+                className="font-medium text-sidebar capitalize tracking-tight"
                 style={{
                   fontFamily: "var(--font-delight)",
                   fontWeight: 500,
                   fontStyle: "normal",
-                  fontSize: "100.37px",
-                  lineHeight: "134.2px",
+                  fontSize: "clamp(2rem, 12vw, 100.37px)",
+                  lineHeight: "1.1",
                   letterSpacing: "0%",
                   verticalAlign: "middle",
                   textTransform: "capitalize",
@@ -121,13 +121,13 @@ export default function BuildYourStack() {
                 Build Your Stack.
               </h2>
               <p
-                className="text-sidebar/80 max-w-2xl"
+                className="text-sidebar/80 max-w-2xl px-2 sm:px-4"
                 style={{
                   fontFamily: "var(--font-satoshi)",
                   fontWeight: 700,
                   fontStyle: "normal",
-                  fontSize: "16px",
-                  lineHeight: "30px",
+                  fontSize: "clamp(0.875rem, 3vw, 16px)",
+                  lineHeight: "1.8",
                   letterSpacing: "0%",
                   verticalAlign: "middle",
                 }}
@@ -137,7 +137,7 @@ export default function BuildYourStack() {
               <button
                 onClick={() => setStep(1)}
                 suppressHydrationWarning
-                className="group mt-8 px-8 py-4 bg-sidebar text-white rounded-2xl flex items-center gap-3 hover:bg-black transition-colors font-semibold"
+                className="group mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-sidebar text-white rounded-xl sm:rounded-2xl flex items-center gap-3 hover:bg-black transition-colors font-semibold text-sm sm:text-base"
               >
                 <span>Start Building</span>
                 <svg
@@ -166,56 +166,56 @@ export default function BuildYourStack() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full min-h-screen bg-white flex flex-col items-center justify-center p-8 md:p-16 relative z-50 overflow-y-auto"
+            className="w-full min-h-screen bg-white flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-16 relative z-50 overflow-y-auto"
           >
             {/* Logo/Icon */}
-            <div className="mb-12 relative w-24 h-24">
+            <div className="mb-8 sm:mb-10 md:mb-12 relative w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24">
               <Image src="/path.png" alt="Thumbstack Logo" fill className="object-contain" />
             </div>
 
             <h2
-              className="font-medium text-sidebar text-center mb-4 tracking-tighter capitalize"
+              className="font-medium text-sidebar text-center mb-2 sm:mb-3 md:mb-4 tracking-tighter capitalize px-2"
               style={{
                 fontFamily: "Nohemi, sans-serif",
-                fontSize: "clamp(2.5rem, 7vw, 100.37px)",
-                lineHeight: "134.2px",
+                fontSize: "clamp(1.5rem, 6vw, 100.37px)",
+                lineHeight: "1.2",
                 letterSpacing: "0%"
               }}
             >
               Your stack is coming together
             </h2>
-            <p className="text-gray-500 text-center mb-20 text-lg md:text-xl">Just a few details, and we&apos;ll turn this into something concrete.</p>
+            <p className="text-gray-500 text-center mb-12 sm:mb-16 md:mb-20 text-xs sm:text-sm md:text-lg lg:text-xl px-2">Just a few details, and we&apos;ll turn this into something concrete.</p>
 
-            <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-              <div className="flex flex-col gap-3">
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">First Name</label>
-                <input type="text" placeholder="Anna" className="w-full border-b border-gray-200 py-4 outline-none text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
+            <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-x-8 sm:gap-x-12 md:gap-x-16 gap-y-8 sm:gap-y-10 md:gap-y-12 px-2 sm:px-0">
+              <div className="flex flex-col gap-2 sm:gap-3">
+                <label className="text-[9px] sm:text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider">First Name</label>
+                <input type="text" placeholder="Anna" className="w-full border-b border-gray-200 py-3 sm:py-4 outline-none text-lg sm:text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
               </div>
-              <div className="flex flex-col gap-3">
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">Last Name</label>
-                <input type="text" placeholder="Louis" className="w-full border-b border-gray-200 py-4 outline-none text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
+              <div className="flex flex-col gap-2 sm:gap-3">
+                <label className="text-[9px] sm:text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider">Last Name</label>
+                <input type="text" placeholder="Louis" className="w-full border-b border-gray-200 py-3 sm:py-4 outline-none text-lg sm:text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
               </div>
-              <div className="flex flex-col gap-3">
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">Email Address</label>
-                <input type="email" placeholder="Anna.Louis@Email.Com" className="w-full border-b border-gray-200 py-4 outline-none text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
+              <div className="flex flex-col gap-2 sm:gap-3">
+                <label className="text-[9px] sm:text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider">Email Address</label>
+                <input type="email" placeholder="Anna.Louis@Email.Com" className="w-full border-b border-gray-200 py-3 sm:py-4 outline-none text-lg sm:text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
               </div>
-              <div className="flex flex-col gap-3">
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">Phone Number</label>
-                <input type="tel" placeholder="+91" className="w-full border-b border-gray-200 py-4 outline-none text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
+              <div className="flex flex-col gap-2 sm:gap-3">
+                <label className="text-[9px] sm:text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider">Phone Number</label>
+                <input type="tel" placeholder="+91" className="w-full border-b border-gray-200 py-3 sm:py-4 outline-none text-lg sm:text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
               </div>
-              <div className="flex flex-col gap-3 md:col-span-2">
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">Project Details</label>
-                <input type="text" placeholder="Tell Us About Your Project..." className="w-full border-b border-gray-200 py-4 outline-none text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
+              <div className="flex flex-col gap-2 sm:gap-3 md:col-span-2">
+                <label className="text-[9px] sm:text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider">Project Details</label>
+                <input type="text" placeholder="Tell Us About Your Project..." className="w-full border-b border-gray-200 py-3 sm:py-4 outline-none text-lg sm:text-2xl md:text-3xl font-medium text-sidebar placeholder:text-gray-100" />
               </div>
             </div>
 
-            <button className="mt-20 px-12 py-5 bg-[#0B1510] text-white rounded-full flex items-center gap-4 hover:bg-black transition-all font-bold text-lg group">
+            <button className="mt-16 sm:mt-20 px-8 sm:px-12 py-4 sm:py-5 bg-[#0B1510] text-white rounded-full flex items-center gap-3 sm:gap-4 hover:bg-black transition-all font-bold text-xs sm:text-sm md:text-lg group">
               Let&apos;s Take This Forward <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
             </button>
 
             <button
               onClick={() => setStep(0)}
-              className="absolute top-10 right-10 w-12 h-12 bg-blue/5 text-blue rounded-full flex items-center justify-center hover:bg-blue/10 transition-colors z-50"
+              className="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-6 md:right-10 w-10 h-10 sm:w-12 sm:h-12 bg-blue/5 text-blue rounded-full flex items-center justify-center hover:bg-blue/10 transition-colors z-50"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 6L6 18M6 6l12 12" /></svg>
             </button>
@@ -230,15 +230,15 @@ export default function BuildYourStack() {
             className="w-full min-h-[80vh] flex flex-col lg:flex-row snap-start bg-[#95E7D3] relative z-10 shadow-2xl"
           >
             {/* Left Column - Form */}
-            <div className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-screen bg-[#95E7D3] p-8 md:p-12 lg:p-16 flex flex-col overflow-y-auto">
+            <div className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-screen bg-[#95E7D3] p-4 sm:p-6 md:p-8 lg:p-16 flex flex-col overflow-y-auto">
               {renderProgressBar()}
 
               {step === 1 && (
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col flex-1">
-                  <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight text-sidebar">What kind of a<br />dreamer are you?</h2>
-                  <p className="text-gray-600 mb-10 text-sm md:text-base">Tell us where you are in your journey — we&apos;ll shape the path around you.</p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 sm:mb-4 leading-tight text-sidebar">What kind of a<br />dreamer are you?</h2>
+                  <p className="text-gray-600 mb-6 sm:mb-8 md:mb-10 text-xs sm:text-sm md:text-base">Tell us where you are in your journey — we&apos;ll shape the path around you.</p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
                     {[
                       { id: 'startup', title: 'Startup Journey', desc: 'For brands ready to launch or scale online.', icon: '🛍️' },
                       { id: 'ecommerce', title: 'E-Commerce Journey', desc: 'Showcase who you are and why you matter.', icon: '💻' },
@@ -248,16 +248,16 @@ export default function BuildYourStack() {
                       <div
                         key={opt.id}
                         onClick={() => setJourney(opt.id)}
-                        className={`p-6 rounded-2xl border-2 cursor-pointer transition-all ${journey === opt.id ? 'border-sidebar bg-blue/5' : 'border-gray-100 bg-gray-50/50 hover:bg-gray-100'}`}
+                        className={`p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 cursor-pointer transition-all ${journey === opt.id ? 'border-sidebar bg-blue/5' : 'border-gray-100 bg-gray-50/50 hover:bg-gray-100'}`}
                       >
-                        <div className="flex justify-between items-start mb-4">
-                          <span className="text-xl">{opt.icon}</span>
-                          <button className="w-6 h-6 rounded-md bg-white shadow-sm flex items-center justify-center border border-gray-200 text-sidebar text-lg pb-1">
+                        <div className="flex justify-between items-start mb-2 sm:mb-3 md:mb-4">
+                          <span className="text-base sm:text-lg md:text-xl">{opt.icon}</span>
+                          <button className="w-5 h-5 sm:w-6 sm:h-6 rounded-md bg-white shadow-sm flex items-center justify-center border border-gray-200 text-sidebar text-xs sm:text-sm md:text-lg pb-0.5">
                             {journey === opt.id ? '✓' : '+'}
                           </button>
                         </div>
-                        <h3 className="font-semibold text-sm mb-2 text-sidebar">{opt.title}</h3>
-                        <p className="text-xs text-gray-500 leading-relaxed">{opt.desc}</p>
+                        <h3 className="font-semibold text-xs sm:text-sm md:text-base mb-1 sm:mb-2 text-sidebar">{opt.title}</h3>
+                        <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 leading-relaxed">{opt.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -266,10 +266,10 @@ export default function BuildYourStack() {
 
               {step === 2 && (
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col flex-1">
-                  <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight text-sidebar">What do you<br />want to build?</h2>
-                  <p className="text-gray-600 mb-10 text-sm md:text-base">Every great build starts with a solid foundation. Tell us what you&apos;re building — we&apos;ll stack the rest from there.</p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 sm:mb-4 leading-tight text-sidebar">What do you<br />want to build?</h2>
+                  <p className="text-gray-600 mb-6 sm:mb-8 md:mb-10 text-xs sm:text-sm md:text-base">Every great build starts with a solid foundation. Tell us what you&apos;re building — we&apos;ll stack the rest from there.</p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
                     {[
                       { id: 'shopify', title: 'Shopify Store', desc: 'For brands ready to launch or scale online.', icon: '🛍️' },
                       { id: 'marketing', title: 'Marketing Website', desc: 'Showcase who you are and why you matter.', icon: '💻' },
@@ -279,16 +279,16 @@ export default function BuildYourStack() {
                       <div
                         key={opt.id}
                         onClick={() => setProduct(opt.id)}
-                        className={`p-6 rounded-2xl border-2 cursor-pointer transition-all ${product === opt.id ? 'border-sidebar bg-blue/5' : 'border-gray-100 bg-gray-50/50 hover:bg-gray-100'}`}
+                        className={`p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 cursor-pointer transition-all ${product === opt.id ? 'border-sidebar bg-blue/5' : 'border-gray-100 bg-gray-50/50 hover:bg-gray-100'}`}
                       >
-                        <div className="flex justify-between items-start mb-4">
-                          <span className="text-xl">{opt.icon}</span>
-                          <button className="w-6 h-6 rounded-md bg-white shadow-sm flex items-center justify-center border border-gray-200 text-sidebar text-lg pb-1">
+                        <div className="flex justify-between items-start mb-2 sm:mb-3 md:mb-4">
+                          <span className="text-base sm:text-lg md:text-xl">{opt.icon}</span>
+                          <button className="w-5 h-5 sm:w-6 sm:h-6 rounded-md bg-white shadow-sm flex items-center justify-center border border-gray-200 text-sidebar text-xs sm:text-sm md:text-lg pb-0.5">
                             {product === opt.id ? '✓' : '+'}
                           </button>
                         </div>
-                        <h3 className="font-semibold text-sm mb-2 text-sidebar">{opt.title}</h3>
-                        <p className="text-xs text-gray-500 leading-relaxed">{opt.desc}</p>
+                        <h3 className="font-semibold text-xs sm:text-sm md:text-base mb-1 sm:mb-2 text-sidebar">{opt.title}</h3>
+                        <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 leading-relaxed">{opt.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -297,10 +297,10 @@ export default function BuildYourStack() {
 
               {step === 3 && (
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col flex-1">
-                  <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight text-sidebar">Cool – now tell us<br />what it needs to do</h2>
-                  <p className="text-gray-600 mb-10 text-sm md:text-base">What&apos;s the job this product needs to accomplish?</p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 sm:mb-4 leading-tight text-sidebar">Cool – now tell us<br />what it needs to do</h2>
+                  <p className="text-gray-600 mb-6 sm:mb-8 md:mb-10 text-xs sm:text-sm md:text-base">What&apos;s the job this product needs to accomplish?</p>
 
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 sm:gap-2.5 md:gap-3">
                     {[
                       { id: 'design', label: '🧭 Custom Design' },
                       { id: 'payments', label: '🛒 Payments' },
@@ -315,7 +315,7 @@ export default function BuildYourStack() {
                       <button
                         key={opt.id}
                         onClick={() => toggleFeature(opt.id)}
-                        className={`px-4 py-2 rounded-xl border transition-colors text-sm font-medium flex items-center gap-2 ${features.includes(opt.id)
+                        className={`px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl border transition-colors text-[10px] sm:text-xs md:text-sm font-medium flex items-center gap-1.5 ${features.includes(opt.id)
                             ? 'border-sidebar bg-sidebar text-white'
                             : 'border-gray-200 bg-white hover:bg-gray-50 text-sidebar'
                           }`}
@@ -329,19 +329,19 @@ export default function BuildYourStack() {
 
               {step === 4 && (
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col flex-1">
-                  <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight text-sidebar">How fast and<br />how fancy ?</h2>
-                  <p className="text-gray-600 mb-10 text-sm md:text-base">Be honest — are we sprinting to launch or building to last?</p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 sm:mb-4 leading-tight text-sidebar">How fast and<br />how fancy ?</h2>
+                  <p className="text-gray-600 mb-6 sm:mb-8 md:mb-10 text-xs sm:text-sm md:text-base">Be honest — are we sprinting to launch or building to last?</p>
 
-                  <div className="flex flex-col gap-8">
+                  <div className="flex flex-col gap-6 sm:gap-7 md:gap-8">
                     {/* Timeline */}
-                    <div className="flex flex-col gap-4">
-                      <h3 className="font-bold text-sidebar text-sm uppercase tracking-wider">Timeline</h3>
-                      <div className="flex flex-wrap gap-3 border-b border-gray-100 pb-8">
+                    <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4">
+                      <h3 className="font-bold text-sidebar text-[10px] sm:text-xs md:text-sm uppercase tracking-wider">Timeline</h3>
+                      <div className="flex flex-wrap gap-2 sm:gap-2.5 md:gap-3 border-b border-gray-100 pb-6 sm:pb-7 md:pb-8">
                         {['Quick Launch', 'Mid-range', 'Full Build'].map(opt => (
                           <button
                             key={opt}
                             onClick={() => setTimeline(opt)}
-                            className={`px-5 py-3 rounded-xl border transition-colors text-sm font-medium ${timeline === opt ? 'border-sidebar bg-sidebar text-white' : 'border-gray-200 bg-white hover:bg-gray-50 text-sidebar'}`}
+                            className={`px-2.5 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl border transition-colors text-[10px] sm:text-xs md:text-sm font-medium ${timeline === opt ? 'border-sidebar bg-sidebar text-white' : 'border-gray-200 bg-white hover:bg-gray-50 text-sidebar'}`}
                           >
                             {opt}
                           </button>
@@ -350,14 +350,14 @@ export default function BuildYourStack() {
                     </div>
 
                     {/* Quality */}
-                    <div className="flex flex-col gap-4">
-                      <h3 className="font-bold text-sidebar text-sm uppercase tracking-wider">Quality Level</h3>
-                      <div className="flex flex-wrap gap-3 border-b border-gray-100 pb-8">
+                    <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4">
+                      <h3 className="font-bold text-sidebar text-[10px] sm:text-xs md:text-sm uppercase tracking-wider">Quality Level</h3>
+                      <div className="flex flex-wrap gap-2 sm:gap-2.5 md:gap-3 border-b border-gray-100 pb-6 sm:pb-7 md:pb-8">
                         {['MVP', 'Production-grade', 'Premium Experience'].map(opt => (
                           <button
                             key={opt}
                             onClick={() => setQuality(opt)}
-                            className={`px-5 py-3 rounded-xl border transition-colors text-sm font-medium ${quality === opt ? 'border-sidebar bg-sidebar text-white' : 'border-gray-200 bg-white hover:bg-gray-50 text-sidebar'}`}
+                            className={`px-2.5 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl border transition-colors text-[10px] sm:text-xs md:text-sm font-medium ${quality === opt ? 'border-sidebar bg-sidebar text-white' : 'border-gray-200 bg-white hover:bg-gray-50 text-sidebar'}`}
                           >
                             {opt}
                           </button>
@@ -366,14 +366,14 @@ export default function BuildYourStack() {
                     </div>
 
                     {/* Support */}
-                    <div className="flex flex-col gap-4">
-                      <h3 className="font-bold text-sidebar text-sm uppercase tracking-wider">Support</h3>
-                      <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4">
+                      <h3 className="font-bold text-sidebar text-[10px] sm:text-xs md:text-sm uppercase tracking-wider">Support</h3>
+                      <div className="flex flex-wrap gap-2 sm:gap-2.5 md:gap-3">
                         {['One-time Project', 'Ongoing Partnership'].map(opt => (
                           <button
                             key={opt}
                             onClick={() => setSupport(opt)}
-                            className={`px-5 py-3 rounded-xl border transition-colors text-sm font-medium ${support === opt ? 'border-sidebar bg-sidebar text-white' : 'border-gray-200 bg-white hover:bg-gray-50 text-sidebar'}`}
+                            className={`px-2.5 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl border transition-colors text-[10px] sm:text-xs md:text-sm font-medium ${support === opt ? 'border-sidebar bg-sidebar text-white' : 'border-gray-200 bg-white hover:bg-gray-50 text-sidebar'}`}
                           >
                             {opt}
                           </button>

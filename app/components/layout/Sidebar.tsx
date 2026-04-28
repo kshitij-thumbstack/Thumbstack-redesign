@@ -9,7 +9,8 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="fixed top-0 left-0 h-full w-[50px] md:w-[70px] bg-sidebar hover:bg-sidebar-hover transition-colors duration-300 z-40 flex flex-col justify-between items-center py-8">
+      {/* Desktop Sidebar - Hidden on mobile */}
+      <aside className="hidden sm:flex fixed top-0 left-0 h-full w-[50px] md:w-[70px] bg-sidebar hover:bg-sidebar-hover transition-colors duration-300 z-40 flex-col justify-between items-center py-8">
         <div className="flex-1 flex items-start justify-center mt-16">
           <Link href="/">
             <h1 className="text-mint font-bold text-2xl tracking-tight -rotate-90 whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300">
@@ -31,27 +32,41 @@ export default function Sidebar() {
         </div>
       </aside>
 
+      {/* Mobile Menu Button - Fixed at top left on mobile */}
+      <button
+        onClick={() => setMenuOpen(true)}
+        className="fixed top-4 left-4 sm:hidden flex flex-col gap-1.5 p-3 cursor-pointer focus:outline-none group items-start bg-white rounded-lg shadow-lg z-50 hover:shadow-xl transition-shadow"
+        suppressHydrationWarning
+      >
+        <span className="block w-5 h-[2.5px] bg-sidebar group-hover:bg-blue transition-colors duration-300"></span>
+        <span className="block w-5 h-[2.5px] bg-sidebar group-hover:bg-blue transition-colors duration-300"></span>
+        <span className="block w-3 h-[2.5px] bg-sidebar group-hover:bg-blue transition-colors duration-300"></span>
+      </button>
+
       {/* Menu Overlay */}
-      <div className={`fixed inset-0 z-[100] grid grid-cols-1 md:grid-cols-[1.8fr_1fr] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div 
+        className={`fixed inset-0 z-[100] grid grid-cols-1 md:grid-cols-[1.8fr_1fr] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        onClick={() => setMenuOpen(false)}
+      >
         
         {/* Left Pane - Navigation */}
-        <div className="bg-sidebar h-full w-full flex flex-col p-6 md:p-8 lg:p-10 relative overflow-y-auto scrollbar-hide">
+        <div className="bg-sidebar h-full w-full flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 relative overflow-y-auto scrollbar-hide" onClick={(e) => e.stopPropagation()}>
           {/* Top Logo - Pushed to top-left corner */}
-          <div className="absolute top-8 left-8">
-            <h2 className="text-mint font-bold text-xl tracking-tight">
+          <div className="absolute top-4 sm:top-8 left-4 sm:left-8">
+            <h2 className="text-mint font-bold text-lg sm:text-xl tracking-tight">
               Thumbstack.
             </h2>
           </div>
 
           {/* Center Links - Typography matching Nohemi spec */}
-          <nav className="flex flex-col gap-2 mt-20 mb-auto pl-8 md:pl-24">
+          <nav className="flex flex-col gap-2 mt-16 sm:mt-20 mb-auto pl-4 sm:pl-8 md:pl-24">
             {["Fields Of Play", "Our Work", "News & Insights", "Service", "About Us"].map((item, idx) => (
               <Link 
                 key={idx} 
                 href="#" 
                 className="text-white font-medium tracking-normal hover:text-mint transition-colors w-fit leading-[1.33]"
                 style={{ 
-                  fontSize: 'clamp(32px, 4.8vw, 68px)',
+                  fontSize: 'clamp(24px, 5vw, 68px)',
                   fontWeight: 500
                 }}
               >
@@ -61,7 +76,7 @@ export default function Sidebar() {
           </nav>
 
           {/* Bottom Controls */}
-          <div className="flex justify-between items-end w-full mt-auto relative h-12">
+          <div className="flex justify-between items-end w-full mt-auto relative h-12 gap-4">
             {/* Close Button - Pushed to bottom-left corner */}
             <button 
               onClick={() => setMenuOpen(false)}
@@ -74,7 +89,7 @@ export default function Sidebar() {
             </button>
 
             {/* Socials - Pushed to bottom-right corner */}
-            <div className="flex gap-4 text-white absolute bottom-2 right-2">
+            <div className="flex gap-2 sm:gap-4 text-white absolute bottom-2 right-2">
               {/* Instagram */}
               <a href="#" className="hover:text-mint transition-colors opacity-80 hover:opacity-100">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
