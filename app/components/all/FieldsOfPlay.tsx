@@ -19,7 +19,7 @@ export default function FieldsOfPlay() {
       id: 1,
       title: "Custom Web Experiences",
       subtitle: "Custom-built platforms designed to scale with your brand's ambition.",
-      image: "/stack.png"
+      image: "/custom product pages.png"
     },
     {
       id: 2,
@@ -52,11 +52,14 @@ export default function FieldsOfPlay() {
             </p>
           </div>
 
-          <div className="flex flex-col items-start md:items-end md:ml-auto gap-2">
-            <span className="text-xs sm:text-sm font-semibold mb-2 flex items-center gap-1 cursor-pointer hover:opacity-70 transition-opacity">
-              Let&apos;s Build Together <span className="text-lg">↗</span>
+          <div className="flex flex-col items-start md:ml-auto gap-4">
+            <span className="text-xs sm:text-sm font-medium flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity text-sidebar/60">
+              Let&apos;s Build Together <span>↗</span>
             </span>
-            <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-sidebar">
+            <h2 
+              className="text-4xl sm:text-6xl md:text-8xl font-medium tracking-tighter text-sidebar leading-none"
+              style={{ fontFamily: "var(--font-nohemi)" }}
+            >
               Fields Of Play
             </h2>
           </div>
@@ -66,29 +69,42 @@ export default function FieldsOfPlay() {
         </div>
 
         {/* Interactive List & Image */}
-        <div className="relative w-full flex flex-col border-t border-gray-100">
+        <div className="relative w-full flex flex-col border-t border-gray-900">
           {fields.map((field) => (
             <div
               key={field.id}
               onMouseEnter={() => setActiveItem(field.id)}
               className={`w-full group cursor-pointer transition-all duration-500 relative ${activeItem === field.id
-                  ? 'bg-sidebar py-8 sm:py-12 md:py-16 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-24 px-4 sm:px-6 md:px-8 lg:px-24 border-none shadow-2xl z-20'
-                  : 'bg-transparent py-6 sm:py-8 md:py-10 border-b border-gray-100'
+                ? 'bg-sidebar py-10 sm:py-14 md:py-20 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-24 px-4 sm:px-6 md:px-8 lg:px-24 border-none shadow-2xl z-20'
+                : 'bg-transparent py-8 sm:py-10 md:py-12 border-b border-gray-900'
                 }`}
             >
               <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-1/2">
-                <div className="flex flex-col gap-2 sm:gap-3">
-                  <h3 className={`text-lg sm:text-2xl md:text-3xl font-medium tracking-tight transition-colors duration-300 ${activeItem === field.id ? 'text-white' : 'text-gray-400 group-hover:text-sidebar'}`}>
+                <div className="flex flex-col gap-1 sm:gap-2">
+                  <h3 
+                    className={`font-medium transition-colors duration-300 ${activeItem === field.id ? 'text-white' : 'text-sidebar group-hover:text-sidebar'}`}
+                    style={{ 
+                      fontFamily: "var(--font-nohemi)", 
+                      fontSize: "28px",
+                      lineHeight: "44px",
+                      letterSpacing: "-2%"
+                    }}
+                  >
                     {field.title}
                   </h3>
 
-                  <AnimatePresence>
+                  <AnimatePresence mode="wait">
                     {activeItem === field.id && (
                       <motion.p
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="text-xs sm:text-sm md:text-lg text-gray-300 mt-2 md:mt-4 max-w-sm font-light overflow-hidden"
+                        className="text-gray-300 mt-1 md:mt-2 max-w-sm overflow-hidden"
+                        style={{ 
+                          fontFamily: "var(--font-nohemi)",
+                          fontSize: "14px",
+                          lineHeight: "20px"
+                        }}
                       >
                         {field.subtitle}
                       </motion.p>
@@ -107,28 +123,39 @@ export default function FieldsOfPlay() {
                     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                     className="md:absolute right-4 sm:right-6 md:right-8 lg:right-8 top-1/2 md:-translate-y-1/2 w-full md:w-[35%] flex justify-end mt-8 md:mt-0 md:pr-4 sm:pr-6 md:pr-8 pointer-events-none"
                   >
-                    <div className="relative w-full aspect-[4/5] md:h-[420px] rounded-lg sm:rounded-2xl overflow-hidden shadow-2xl z-20 pointer-events-auto border-4 border-white/10">
-                      <Image
-                        src={field.image}
-                        alt={field.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 400px"
-                        className="object-cover"
-                      />
+                    <div 
+                      className="relative w-full aspect-[4/5] md:h-[420px] flex-shrink-0 pointer-events-auto"
+                      onMouseMove={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        setDragPosition({ x, y });
+                      }}
+                    >
+                      {/* Actual Image Card */}
+                      <div className="relative w-full h-full rounded-lg sm:rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 z-20">
+                        <Image
+                          src={field.image}
+                          alt={field.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 400px"
+                          className="object-cover"
+                        />
+                      </div>
 
-                      {/* Floating View Badge */}
+                      {/* Floating View Badge — Mouse Follow Interaction ── */}
                       <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: 0.2, type: "spring" }}
-                        drag
-                        dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-                        onDrag={(event, info) => {
-                          setDragPosition({ x: info.offset.x, y: info.offset.y });
+                        initial={{ scale: 0, x: "-50%", y: "-50%" }}
+                        animate={{ 
+                          scale: 1, 
+                          x: dragPosition.x - (10), // Offset slightly to left to maintain "stamp" feel
+                          y: dragPosition.y,
+                          transition: { type: "spring", damping: 25, stiffness: 200 }
                         }}
-                        className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 w-16 sm:w-20 md:w-28 h-16 sm:h-20 md:h-28 bg-mint rounded-full flex justify-center items-center font-bold text-sidebar text-xs sm:text-sm md:text-lg cursor-grab active:cursor-grabbing shadow-xl hover:scale-110 transition-transform z-30"
+                        className="absolute left-0 top-0 w-16 h-16 md:w-24 md:h-24 bg-mint rounded-full flex justify-center items-center font-bold text-sidebar text-xs md:text-lg cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.4)] z-50 pointer-events-none"
+                        style={{ fontFamily: "var(--font-nohemi)" }}
                       >
-                        View
+                        <span className="relative z-10">View</span>
                       </motion.div>
                     </div>
                   </motion.div>

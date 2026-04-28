@@ -28,76 +28,79 @@ export default function LetsTalk() {
           >
             Lets<br />Create
           </h2>
-          <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm">
+          <p 
+            className="text-gray-400 text-xs sm:text-[13px] leading-relaxed max-w-sm"
+            style={{ fontFamily: "var(--font-satoshi)" }}
+          >
             Great products begin with simple conversations. Tell us what you&apos;re envisioning — the goals, the gaps, the sparks — and we&apos;ll come back with ideas, clarity, and a way forward that actually moves the needle.
           </p>
         </div>
 
         {/* Right Side - Form */}
-        <div className="flex flex-col gap-6 md:gap-8 w-full lg:w-3/5 pt-4 sm:pt-6 md:pt-8">
+        <div className="flex flex-col gap-10 md:gap-12 w-full lg:w-3/5 pt-4 sm:pt-6 md:pt-8">
           {/* Row 1: First Name + Last Name */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div className="flex flex-col gap-2">
-              <label className="text-gray-500 text-xs font-medium uppercase tracking-wider">First Name</label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+            <div className="flex flex-col gap-3">
+              <label className="text-gray-500 text-[10px] font-medium uppercase tracking-wider">First Name</label>
               <input
                 type="text"
                 placeholder="Anna"
-                className="bg-transparent border-b border-gray-600 text-white text-sm md:text-lg pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+                className="bg-transparent border-b border-gray-600 text-white text-sm md:text-base pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
                 suppressHydrationWarning
               />
             </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-gray-500 text-xs font-medium uppercase tracking-wider">Last Name</label>
+            <div className="flex flex-col gap-3">
+              <label className="text-gray-500 text-[10px] font-medium uppercase tracking-wider">Last Name</label>
               <input
                 type="text"
                 placeholder="Louis"
-                className="bg-transparent border-b border-gray-600 text-white text-sm md:text-lg pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+                className="bg-transparent border-b border-gray-600 text-white text-sm md:text-base pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
                 suppressHydrationWarning
               />
             </div>
           </div>
 
           {/* Row 2: Email + Phone */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div className="flex flex-col gap-2">
-              <label className="text-gray-500 text-xs font-medium uppercase tracking-wider">Email Address</label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+            <div className="flex flex-col gap-3">
+              <label className="text-gray-500 text-[10px] font-medium uppercase tracking-wider">Email Address</label>
               <input
                 type="email"
                 placeholder="Anna.Louis@Email.Com"
-                className="bg-transparent border-b border-gray-600 text-white text-sm md:text-lg pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+                className="bg-transparent border-b border-gray-600 text-white text-sm md:text-base pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
                 suppressHydrationWarning
               />
             </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-gray-500 text-xs font-medium uppercase tracking-wider">Phone Number</label>
+            <div className="flex flex-col gap-3">
+              <label className="text-gray-500 text-[10px] font-medium uppercase tracking-wider">Phone Number</label>
               <input
                 type="tel"
                 placeholder="+91"
-                className="bg-transparent border-b border-gray-600 text-white text-sm md:text-lg pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+                className="bg-transparent border-b border-gray-600 text-white text-sm md:text-base pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
                 suppressHydrationWarning
               />
             </div>
           </div>
 
           {/* Row 3: Project Details */}
-          <div className="flex flex-col gap-2">
-            <label className="text-gray-500 text-xs font-medium uppercase tracking-wider">Project Details</label>
+          <div className="flex flex-col gap-3">
+            <label className="text-gray-500 text-[10px] font-medium uppercase tracking-wider">Project Details</label>
             <input
               type="text"
               placeholder="Tell Us About Your Project..."
-              className="bg-transparent border-b border-gray-600 text-white text-sm md:text-lg pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
+              className="bg-transparent border-b border-gray-600 text-white text-sm md:text-base pb-2 md:pb-3 focus:outline-none focus:border-white transition-colors placeholder:text-gray-500"
               suppressHydrationWarning
             />
           </div>
 
           {/* Submit Button */}
           <button
-            className="self-start mt-2 md:mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-blue hover:bg-blue/90 text-white rounded-full font-semibold flex items-center gap-2 sm:gap-3 transition-all hover:scale-105 shadow-lg text-sm sm:text-base"
+            className="self-start mt-2 md:mt-4 px-5 sm:px-6 py-2.5 sm:py-3 bg-blue hover:bg-blue/90 text-white rounded-full font-semibold flex items-center gap-2 sm:gap-3 transition-all hover:scale-105 shadow-lg text-xs sm:text-sm"
             suppressHydrationWarning
           >
             Talk to us
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>

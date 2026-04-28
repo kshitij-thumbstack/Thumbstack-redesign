@@ -4,8 +4,7 @@ import PartnerBrands from "./components/all/PartnerBrands";
 import ProductDriven from "./components/all/ProductDriven";
 import Principles from "./components/all/Principles";
 import BuildYourStack from "./components/all/BuildYourStack";
-import SqulioProject from "./components/all/SqulioProject";
-import BFTProject from "./components/all/BFTProject";
+import Projects from "./components/all/Projects";
 import WorkItem from "./components/all/WorkItem";
 import FromTheStack from "./components/all/FromTheStack";
 import LetsTalk from "./components/all/LetsTalk";
@@ -25,8 +24,7 @@ export default async function Home() {
   return (
     <div className="w-full relative">
       <Hero />
-      <SqulioProject />
-      <BFTProject />
+      <Projects />
       <FieldsOfPlay />
       <PartnerBrands />
       <Principles />

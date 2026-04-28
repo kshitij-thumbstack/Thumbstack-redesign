@@ -106,27 +106,24 @@ export default function BuildYourStack() {
           >
             <div className="flex flex-col items-center justify-center text-center max-w-4xl gap-4 sm:gap-5 md:gap-6">
               <h2
-                className="font-medium text-sidebar capitalize tracking-tight"
+                className="text-sidebar capitalize tracking-tight"
                 style={{
                   fontFamily: "var(--font-delight)",
                   fontWeight: 500,
-                  fontStyle: "normal",
-                  fontSize: "clamp(2rem, 12vw, 100.37px)",
-                  lineHeight: "1.1",
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
+                  fontSize: "clamp(2.5rem, 10vw, 100.37px)",
+                  lineHeight: "1.33", // Approx 134.2px for 100.37px font
                   textTransform: "capitalize",
+                  verticalAlign: "middle",
                 }}
               >
                 Build Your Stack.
               </h2>
               <p
-                className="text-sidebar/80 max-w-2xl px-2 sm:px-4"
+                className="text-sidebar/80 max-w-5xl px-2 sm:px-4 whitespace-nowrap"
                 style={{
                   fontFamily: "var(--font-satoshi)",
                   fontWeight: 700,
-                  fontStyle: "normal",
-                  fontSize: "clamp(0.875rem, 3vw, 16px)",
+                  fontSize: "clamp(0.7rem, 1.2vw, 14px)",
                   lineHeight: "1.8",
                   letterSpacing: "0%",
                   verticalAlign: "middle",
@@ -137,12 +134,12 @@ export default function BuildYourStack() {
               <button
                 onClick={() => setStep(1)}
                 suppressHydrationWarning
-                className="group mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-sidebar text-white rounded-xl sm:rounded-2xl flex items-center gap-3 hover:bg-black transition-colors font-semibold text-sm sm:text-base"
+                className="group mt-6 sm:mt-8 px-5 sm:px-6 py-2.5 sm:py-3 bg-sidebar text-white rounded-xl sm:rounded-2xl flex items-center gap-3 hover:bg-black transition-colors font-semibold text-xs sm:text-sm"
               >
                 <span>Start Building</span>
                 <svg
-                  width="16"
-                  height="16"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

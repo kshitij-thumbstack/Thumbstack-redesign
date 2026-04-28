@@ -6,7 +6,7 @@ export default function FooterCTA() {
       {/* Top Half: Mint Green */}
       <div className="flex-1 w-full bg-mint flex items-center justify-center py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-24">
         <div className="w-full max-w-[1400px] flex flex-col items-center">
-          <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10vw] font-bold tracking-tighter text-sidebar text-center leading-[0.9]">
+          <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-[8.5vw] font-bold tracking-tighter text-sidebar text-center leading-[0.9]">
             Build Your Stack.
           </h2>
           <p className="mt-4 sm:mt-6 md:mt-8 text-sidebar/80 font-medium text-xs sm:text-sm md:text-base lg:text-lg text-center max-w-xs sm:max-w-sm md:max-w-lg">

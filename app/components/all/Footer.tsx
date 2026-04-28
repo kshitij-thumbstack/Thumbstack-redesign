@@ -23,7 +23,7 @@ export default function Footer() {
                 lineHeight: "clamp(2.5rem, 10vw, 152px)",
                 letterSpacing: "-2%",
                 verticalAlign: "middle",
-                textTransform: "capitalize"
+                textTransform: "none"
               }}
             >
               Say hi!
