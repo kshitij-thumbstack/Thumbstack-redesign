@@ -30,8 +30,10 @@ export const projects = [
     images: {
       main: "/Home.png",
       mainAlt: "Squlio Dashboard",
-      sideTop: { src: "/Frame 2085663160.png", alt: "Squlio Mobile View" },
-      sideBot: { src: "/Custom product pages.png", alt: "Squlio Custom Pages" },
+      sideImages: [
+        { src: "/Frame 2085663160.png", alt: "Squlio Mobile View" },
+        { src: "/Custom product pages.png", alt: "Squlio Custom Pages" },
+      ]
     },
   },
   {
@@ -52,8 +54,10 @@ export const projects = [
     images: {
       main: "/BFT2.jpg",
       mainAlt: "Bharat Flooring and Tiles — Homepage",
-      sideTop: { src: "/BFT1.png", alt: "BFT Tile Catalogue" },
-      sideBot: { src: "/BFT3.png", alt: "BFT Room Visualiser" },
+      sideImages: [
+        { src: "/BFT1.png", alt: "BFT Tile Catalogue" },
+        { src: "/BFT3.png", alt: "BFT Room Visualiser" },
+      ]
     },
   },
   {

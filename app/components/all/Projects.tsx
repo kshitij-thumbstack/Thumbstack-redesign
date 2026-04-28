@@ -134,26 +134,50 @@ function ProjectCard({
           </div>
 
           {/* Right column: Animated Marquee of small images - Extended height downwards */}
-          <div className="flex flex-col gap-4 md:gap-6 flex-1 min-w-0 h-[115%] relative overflow-hidden pointer-events-none">
-            <div className="flex flex-col gap-4 md:gap-6 animate-[marquee-y-up_30s_linear_infinite]">
-              {/* Combine legacy side images or use new sideImages array, filtering out any missing items */}
-              {(() => {
-                const displayImages = project.images.sideImages || 
-                  [project.images.sideTop, project.images.sideBot].filter((img): img is SideImage => !!img);
-                  
-                return displayImages.concat(displayImages).map((img, idx) => (
-                  <div key={idx} className="relative w-full aspect-[4/5] md:aspect-square flex-shrink-0 pointer-events-none">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      unoptimized
-                      className="object-contain"
-                    />
-                  </div>
-                ));
-              })()}
-            </div>
+          <div className="flex gap-4 md:gap-6 flex-1 min-w-0 h-[115%] relative overflow-hidden pointer-events-none justify-center">
+            {(() => {
+              const displayImages = project.images.sideImages || 
+                [project.images.sideTop, project.images.sideBot].filter((img): img is SideImage => !!img);
+              
+              // If we have sideImages, let's do the dual-column "sidebar" style
+              if (project.images.sideImages && project.images.sideImages.length >= 2) {
+                const mid = Math.ceil(project.images.sideImages.length / 2);
+                const col1 = project.images.sideImages.slice(0, mid);
+                const col2 = project.images.sideImages.slice(mid);
+
+                return (
+                  <>
+                    {/* Column 1 - Moving Up */}
+                    <div className="flex flex-col gap-4 md:gap-6 animate-[marquee-y-up_30s_linear_infinite] w-1/2">
+                      {col1.concat(col1).map((img, idx) => (
+                        <div key={`col1-${idx}`} className="relative w-full aspect-[4/5] flex-shrink-0">
+                          <Image src={img.src} alt={img.alt} fill unoptimized className="object-contain" />
+                        </div>
+                      ))}
+                    </div>
+                    {/* Column 2 - Moving Down */}
+                    <div className="flex flex-col gap-4 md:gap-6 animate-[marquee-y-down_30s_linear_infinite] w-1/2 mt-[-100px]">
+                      {col2.concat(col2).map((img, idx) => (
+                        <div key={`col2-${idx}`} className="relative w-full aspect-[4/5] flex-shrink-0">
+                          <Image src={img.src} alt={img.alt} fill unoptimized className="object-contain" />
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                );
+              }
+
+              // Fallback for projects with fewer images
+              return (
+                <div className="flex flex-col gap-4 md:gap-6 animate-[marquee-y-up_30s_linear_infinite] w-full">
+                  {displayImages.concat(displayImages).map((img, idx) => (
+                    <div key={idx} className="relative w-full aspect-[4/5] md:aspect-square flex-shrink-0 pointer-events-none">
+                      <Image src={img.src} alt={img.alt} fill unoptimized className="object-contain" />
+                    </div>
+                  ))}
+                </div>
+              );
+            })()}
             {/* Overlay to fade out top/bottom of marquee */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/10 pointer-events-none" />
           </div>
