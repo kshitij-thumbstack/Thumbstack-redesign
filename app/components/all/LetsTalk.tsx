@@ -28,7 +28,7 @@ export default function LetsTalk() {
           >
             Lets<br />Create
           </h2>
-          <p 
+          <p
             className="text-gray-400 text-xs sm:text-[13px] leading-relaxed max-w-sm"
             style={{ fontFamily: "var(--font-satoshi)" }}
           >

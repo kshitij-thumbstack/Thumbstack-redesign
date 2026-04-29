@@ -67,7 +67,7 @@ export default function Sidebar() {
               { name: "Our Work", href: "/our-work" },
               { name: "News & Insights", href: "/news-and-insights" },
               { name: "Service", href: "/#service" },
-              { name: "About Us", href: "/#about-us" }
+              { name: "About Us", href: "/about-us" }
             ].map((item, idx) => (
               <Link
                 key={idx}

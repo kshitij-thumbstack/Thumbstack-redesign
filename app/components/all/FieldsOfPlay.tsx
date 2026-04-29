@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
 
 export default function FieldsOfPlay() {
-  const [activeItem, setActiveItem] = useState(1);
+  const [activeItem, setActiveItem] = useState<number | null>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Motion values for smooth cursor tracking without re-renders
@@ -52,10 +52,13 @@ export default function FieldsOfPlay() {
 
   const handleMouseEnter = (id: number) => {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
-    // Reduced delay for better responsiveness in dev
     hoverTimeoutRef.current = setTimeout(() => {
       setActiveItem(id);
-    }, 20);
+    }, 200);
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -79,7 +82,7 @@ export default function FieldsOfPlay() {
             <span className="text-xs sm:text-sm font-medium flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity text-sidebar/60">
               Let&apos;s Build Together <span>↗</span>
             </span>
-            <h2 
+            <h2
               className="text-4xl sm:text-6xl md:text-8xl font-medium tracking-tighter text-sidebar leading-none"
               style={{ fontFamily: "var(--font-nohemi)" }}
             >
@@ -97,6 +100,7 @@ export default function FieldsOfPlay() {
             <div
               key={field.id}
               onMouseEnter={() => handleMouseEnter(field.id)}
+              onMouseLeave={handleMouseLeave}
               onClick={() => setActiveItem(field.id)}
               className={`w-full group cursor-pointer transition-all duration-500 ease-in-out relative ${activeItem === field.id
                 ? 'bg-sidebar py-10 sm:py-14 md:py-20 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-24 px-4 sm:px-6 md:px-8 lg:px-24 border-none shadow-2xl z-20'
@@ -105,10 +109,10 @@ export default function FieldsOfPlay() {
             >
               <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-1/2">
                 <div className="flex flex-col gap-1 sm:gap-2">
-                  <h3 
+                  <h3
                     className={`font-medium transition-colors duration-300 ${activeItem === field.id ? 'text-white' : 'text-sidebar group-hover:text-sidebar'}`}
-                    style={{ 
-                      fontFamily: "var(--font-nohemi)", 
+                    style={{
+                      fontFamily: "var(--font-nohemi)",
                       fontSize: "28px",
                       lineHeight: "44px",
                       letterSpacing: "-2%"
@@ -125,7 +129,7 @@ export default function FieldsOfPlay() {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
                         className="text-gray-300 mt-1 md:mt-2 max-w-sm overflow-hidden"
-                        style={{ 
+                        style={{
                           fontFamily: "var(--font-nohemi)",
                           fontSize: "14px",
                           lineHeight: "20px"
@@ -149,7 +153,7 @@ export default function FieldsOfPlay() {
                     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                     className="md:absolute right-4 sm:right-6 md:right-8 lg:right-8 top-1/2 md:-translate-y-1/2 w-full md:w-[35%] flex justify-end mt-8 md:mt-0 md:pr-4 sm:pr-6 md:pr-8 pointer-events-none"
                   >
-                    <div 
+                    <div
                       className="relative w-full aspect-[4/5] md:h-[420px] flex-shrink-0 pointer-events-auto"
                       onMouseMove={handleMouseMove}
                     >
@@ -168,7 +172,7 @@ export default function FieldsOfPlay() {
                       {/* Floating View Badge — Mouse Follow Interaction ── */}
                       <motion.div
                         className="absolute left-0 top-0 w-16 h-16 md:w-24 md:h-24 bg-mint rounded-full flex justify-center items-center font-bold text-sidebar text-xs md:text-lg cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.4)] z-50 pointer-events-none will-change-transform"
-                        style={{ 
+                        style={{
                           fontFamily: "var(--font-nohemi)",
                           x: smoothX,
                           y: smoothY,

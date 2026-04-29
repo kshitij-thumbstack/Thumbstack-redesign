@@ -9,25 +9,25 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   return (
-    <div 
+    <div
       className={`flex flex-col gap-4 sm:gap-6 shrink-0 relative transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group/item
-        ${idx % 2 === 0 
-          ? 'w-[280px] sm:w-[400px] md:w-[639px]' 
+        ${idx % 2 === 0
+          ? 'w-[280px] sm:w-[400px] md:w-[639px]'
           : 'w-[240px] sm:w-[320px] md:w-[480px] hover:w-[280px] sm:hover:w-[400px] md:hover:w-[639px]'
         }
       `}
       onMouseMove={(e) => {
         const rect = e.currentTarget.getBoundingClientRect();
-        setMousePos({ 
-          x: e.clientX - rect.left, 
-          y: e.clientY - rect.top 
+        setMousePos({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top
         });
       }}
     >
       {/* Card Image Container */}
       <div className={`relative rounded-lg sm:rounded-2xl md:rounded-[2rem] overflow-hidden group/card shadow-lg
-        ${idx % 2 === 0 
-          ? 'w-[280px] sm:w-[400px] md:w-[639px] h-[200px] sm:h-[300px] md:h-[488px]' 
+        ${idx % 2 === 0
+          ? 'w-[280px] sm:w-[400px] md:w-[639px] h-[200px] sm:h-[300px] md:h-[488px]'
           : 'w-[240px] sm:w-[320px] md:w-[480px] h-[180px] sm:h-[240px] md:h-[366px] hover:w-[280px] sm:hover:w-[400px] md:hover:w-[639px] hover:h-[200px] sm:hover:h-[300px] md:hover:h-[488px]'
         }
       `}>
@@ -49,8 +49,8 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
 
         {/* Drag Indicator — Mouse Follow Interaction ── */}
         {(idx === 2 || idx === 5) && (
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               x: mousePos.x - 48, // Offset to center (approx for 24rem width)
               y: mousePos.y - 48,
               transition: { type: "spring", damping: 25, stiffness: 200 }

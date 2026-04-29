@@ -9,6 +9,7 @@ import WorkItem from "./components/all/WorkItem";
 import FromTheStack from "./components/all/FromTheStack";
 import LetsTalk from "./components/all/LetsTalk";
 import Footer from "./components/all/Footer";
+import Info from "./components/all/Info";
 
 import { fetchStrapi } from "./lib/strapi";
 
@@ -30,6 +31,7 @@ export default async function Home() {
       <Principles />
       <WorkItem />
       <ProductDriven techItems={techItems} />
+      <Info />
       <FromTheStack />
       <BuildYourStack />
       <LetsTalk />

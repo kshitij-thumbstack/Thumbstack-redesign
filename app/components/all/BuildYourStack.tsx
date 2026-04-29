@@ -114,29 +114,23 @@ export default function BuildYourStack() {
           >
             <div className="flex flex-col items-center justify-center text-center max-w-4xl gap-4 sm:gap-5 md:gap-6">
               <h2
-                className="text-sidebar capitalize tracking-tight"
+                className="text-[#0F1D07] capitalize tracking-tight"
                 style={{
-                  fontFamily: "var(--font-delight)",
-                  fontWeight: 600,
-                  fontSize: "clamp(2.5rem, 10vw, 100.37px)",
-                  lineHeight: "1.33",
-                  textTransform: "capitalize",
-                  verticalAlign: "middle",
-                  color: "#0A110D",
+                  fontFamily: "var(--font-nohemi)",
+                  fontWeight: 500,
+                  fontSize: "clamp(48px, 10vw, 100.369px)",
+                  lineHeight: "134px",
                 }}
               >
                 Build Your Stack.
               </h2>
               <p
-                className="text-sidebar/80 max-w-5xl px-2 sm:px-4 whitespace-nowrap"
+                className="text-[#0F1D07] opacity-80 max-w-[696px]"
                 style={{
                   fontFamily: "var(--font-satoshi)",
                   fontWeight: 400,
-                  fontSize: "18px",
-                  lineHeight: "39px",
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
-                  color: "#111"
+                  fontSize: "16px",
+                  lineHeight: "30px",
                 }}
               >
                 A fun little estimator to help you imagine what it&apos;ll take to bring your idea to life. One block at a time.
