@@ -20,28 +20,31 @@ export default function Hero() {
 
       {/* Main typography */}
       <div className="w-full max-w-[1400px] mx-auto flex-1 flex flex-col justify-center relative py-12">
-        <h1 
-          className="text-[clamp(2.5rem,10vw,7rem)] leading-[1.05] tracking-tighter font-bold text-foreground max-w-[1200px]"
-          style={{ fontFamily: "var(--font-delight)" }}
+        <h1
+          className="text-[clamp(2.5rem,10vw,7rem)] leading-[1.15] tracking-tighter max-w-[1200px]"
+          style={{
+            fontFamily: "var(--font-delight)",
+            fontWeight: 600
+          }}
         >
-          <span className="flex flex-wrap items-center gap-x-4">
-            <span className="bg-mint text-blue px-2 pb-1 md:px-5 md:pb-3 rounded-none inline-block">Designing</span>
-            <span className="text-blue">and</span>
-            <span className="bg-blue text-mint px-2 pb-1 md:px-5 md:pb-3 rounded-none inline-block">building</span>
+          <span className="flex flex-wrap items-center gap-x-6 gap-y-4">
+            <span className="bg-mint text-[#3145DD] px-2 pb-1 md:px-5 md:pb-3 rounded-none inline-block">Designing</span>
+            <span className="text-[#3145DD]">and</span>
+            <span className="bg-[#3145DD] text-mint px-2 pb-1 md:px-5 md:pb-3 rounded-none inline-block">building</span>
           </span>
-          <span className="text-blue block mt-2">meaningful digital</span>
-          <span className="text-blue block">experiences.</span>
+          <span className="text-[#3145DD] block mt-2">meaningful digital</span>
+          <span className="text-[#3145DD] block">experiences.</span>
         </h1>
 
         <div className="mt-8 md:mt-12 flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-8">
           <div className="flex flex-col gap-2">
-            <p 
+            <p
               className="text-foreground font-medium text-sm md:text-base"
               style={{ fontFamily: "var(--font-satoshi)" }}
             >
               We Build The Remarkable, Not The Routine.
             </p>
-            <p 
+            <p
               className="text-foreground font-medium text-sm md:text-base"
               style={{ fontFamily: "var(--font-satoshi)" }}
             >
@@ -50,12 +53,12 @@ export default function Hero() {
           </div>
 
           <div className="mr-0 md:mr-12 lg:mr-24 hidden sm:block">
-            <div className="relative w-20 h-20 md:w-32 md:h-32">
+            <div className="relative w-32 h-32 md:w-48 md:h-48">
               <Image
                 src="/circle.png"
                 alt="Decorative spinning circle"
                 fill
-                sizes="(max-width: 768px) 80px, 128px"
+                sizes="(max-width: 768px) 128px, 192px"
                 className="object-contain animate-[spin_20s_linear_infinite]"
               />
             </div>
