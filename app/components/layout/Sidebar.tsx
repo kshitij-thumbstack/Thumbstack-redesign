@@ -10,24 +10,46 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop Sidebar - Hidden on mobile */}
-      <aside className="hidden sm:flex fixed top-0 left-0 h-full w-[50px] md:w-[70px] bg-sidebar hover:bg-sidebar-hover transition-colors duration-300 z-40 flex-col justify-between items-center py-8">
-        <div className="flex-1 flex items-start justify-center mt-16">
-          <Link href="/">
-            <h1 className="text-mint font-bold text-2xl tracking-tight -rotate-90 whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300">
+      <aside 
+        className="hidden sm:flex fixed top-0 left-0 h-full w-[53px] bg-[#0F1D07] border-r border-[rgba(82,80,80,0.32)] hover:bg-sidebar-hover transition-colors duration-300 z-40 flex-col justify-between items-center py-8 group/sidebar"
+      >
+        <div className="flex-1 flex flex-col items-center justify-start mt-8 gap-[300px]">
+          <Link href="/" className="mt-8">
+            <h1 
+              className="text-[#95E7D3] tracking-[-0.02em] rotate-90 whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300 flex items-end text-center"
+              style={{
+                fontFamily: "var(--font-nohemi)",
+                fontWeight: 500,
+                fontSize: "23.3867px",
+                lineHeight: "23px"
+              }}
+            >
               Thumbstack.
             </h1>
           </Link>
+          
+          <a href="mailto:hello@thumbstack.co" 
+             className="text-white rotate-90 whitespace-nowrap opacity-0 group-hover/sidebar:opacity-100 transition-opacity duration-300 underline"
+             style={{
+               fontFamily: "var(--font-satoshi)",
+               fontWeight: 400,
+               fontSize: "14px",
+               lineHeight: "24px"
+             }}
+          >
+            hello@thumbstack.co
+          </a>
         </div>
 
-        <div className="flex-none mb-24">
+        <div className="flex-none mb-8">
           <button
             onClick={() => setMenuOpen(true)}
-            className="flex flex-col gap-1.5 p-4 cursor-pointer focus:outline-none group items-start"
+            className="relative w-[25px] h-[25px] cursor-pointer focus:outline-none group block"
             suppressHydrationWarning
           >
-            <span className="block w-6 h-[2px] bg-mint group-hover:bg-white transition-colors duration-300"></span>
-            <span className="block w-6 h-[2px] bg-mint group-hover:bg-white transition-colors duration-300"></span>
-            <span className="block w-4 h-[2px] bg-mint group-hover:bg-white transition-colors duration-300"></span>
+             <div className="absolute left-[15.62%] right-[31.25%] top-[50%] h-[1.5px] bg-white group-hover:bg-[#95E7D3] transition-colors"></div>
+             <div className="absolute left-[15.62%] right-[15.62%] top-[25%] h-[1.5px] bg-white group-hover:bg-[#95E7D3] transition-colors"></div>
+             <div className="absolute left-[15.62%] right-[15.62%] top-[75%] h-[1.5px] bg-white group-hover:bg-[#95E7D3] transition-colors"></div>
           </button>
         </div>
       </aside>
@@ -74,7 +96,7 @@ export default function Sidebar() {
                 href={item.href}
                 className="text-white font-medium tracking-normal hover:text-mint transition-colors w-fit leading-[1.33]"
                 style={{
-                  fontSize: 'clamp(40px, 9vw, 96px)',
+                  fontSize: 'clamp(32px, 8vw, 84px)',
                   fontWeight: 500
                 }}
               >

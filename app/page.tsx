@@ -10,18 +10,14 @@ import FromTheStack from "./components/all/FromTheStack";
 import LetsTalk from "./components/all/LetsTalk";
 import Footer from "./components/all/Footer";
 import Info from "./components/all/Info";
+import HeroNewsAndInsights from "./components/all/HeroNewsAndInsights";
+import NewsAndInsightsGrid from "./components/all/NewsAndInsightsGrid";
+import ArticlesList from "./components/all/ArticlesList";
+import HeroWork from "./components/all/HeroWork";
 
 import { fetchStrapi } from "./lib/strapi";
 
 export default async function Home() {
-  let techItems = [];
-  try {
-    const res = await fetchStrapi("tech-stacks", "populate=*");
-    techItems = res.data || [];
-  } catch (err) {
-    console.error("Failed to fetch tech stack for home page:", err);
-  }
-
   return (
     <div className="w-full relative">
       <Hero />
@@ -30,12 +26,17 @@ export default async function Home() {
       <PartnerBrands />
       <Principles />
       <WorkItem />
-      <ProductDriven techItems={techItems} />
-      <Info />
+      <ProductDriven />
       <FromTheStack />
       <BuildYourStack />
+      <HeroNewsAndInsights />
+      <NewsAndInsightsGrid />
+      <ArticlesList />
+      <HeroWork />
+      <Info />
       <LetsTalk />
       <Footer />
     </div>
   );
 }
+

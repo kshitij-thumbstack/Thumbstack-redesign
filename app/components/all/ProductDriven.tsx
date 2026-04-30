@@ -3,17 +3,36 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { getStrapiURL } from "../../lib/strapi";
 
-interface TechItem {
-  id: number;
-  name: string;
-  logo?: {
-    url: string;
-  };
-}
+const TECH_TOOLS = [
+  { name: "8th Wall", logo: "8b1802af-8th-Wall-Horizontal-Logo-Purple 1.png" },
+  { name: "ReactJS", logo: "ReactJS.png" },
+  { name: "WordPress", logo: "bi_wordpress.png" },
+  { name: "Android", logo: "devicon_android.png" },
+  { name: "Next.js", logo: "devicon_nextjs-wordmark.png" },
+  { name: "Nuxt.js", logo: "devicon_nuxtjs.png" },
+  { name: "Ghost", logo: "ghost-logo-dark 2.png" },
+  { name: "Midjourney", logo: "logos_midjourney.png" },
+  { name: "Python", logo: "logos_python.png" },
+  { name: "Segment", logo: "logos_segment-icon.png" },
+  { name: "Shopify", logo: "logos_shopify.png" },
+  { name: "Node.js", logo: "material-icon-theme_nodejs.png" },
+  { name: "Ollama", logo: "ollama 1.png" },
+  { name: "Figma", logo: "skill-icons_figma-light.png" },
+  { name: "Group 49", logo: "6808f9ca7883e7d17a64a7b8_Group 49 1.png" },
+  { name: "Vector", logo: "Vector.png" },
+  { name: "Vector 1", logo: "Vector-1.png" },
+  { name: "Group", logo: "Group.png" },
+  { name: "Group 1", logo: "Group-1.png" },
+  { name: "Ellipse 456", logo: "Ellipse 456.png" },
+  { name: "Ellipse 457", logo: "Ellipse 457.png" },
+  { name: "Logo 53", logo: "image 53.png" },
+  { name: "Group 594", logo: "Group 1321314594.png" },
+  { name: "Group 597", logo: "Group 1321314597.png" },
+  { name: "Group 598", logo: "Group 1321314598.png" },
+];
 
-export default function ProductDriven({ techItems }: { techItems: TechItem[] }) {
+export default function ProductDriven() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
   // Predefined relative positions to match the design roughly
@@ -33,6 +52,16 @@ export default function ProductDriven({ techItems }: { techItems: TechItem[] }) 
     { top: "75%", right: "25%" },
     { top: "5%", left: "30%" },
     { bottom: "5%", right: "30%" },
+    { top: "60%", left: "35%" },
+    { top: "65%", right: "35%" },
+    { top: "35%", right: "55%" },
+    { bottom: "35%", left: "55%" },
+    { top: "85%", left: "45%" },
+    { top: "5%", right: "50%" },
+    { bottom: "5%", left: "50%" },
+    { top: "45%", left: "12%" },
+    { top: "55%", right: "12%" },
+    { top: "20%", left: "25%" },
   ];
 
   return (
@@ -40,13 +69,13 @@ export default function ProductDriven({ techItems }: { techItems: TechItem[] }) 
       
       {/* Background Floating Logos */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {techItems.map((item, i) => {
+        {TECH_TOOLS.map((item, i) => {
           const pos = positions[i % positions.length];
-          const isActive = activeId === item.id;
+          const isActive = activeId === i;
 
           return (
             <motion.div
-              key={item.id}
+              key={i}
               className="absolute pointer-events-auto cursor-pointer flex flex-col items-center z-20"
               style={pos}
               animate={{
@@ -58,21 +87,16 @@ export default function ProductDriven({ techItems }: { techItems: TechItem[] }) 
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              onClick={() => setActiveId(isActive ? null : item.id)}
+              onClick={() => setActiveId(isActive ? null : i)}
             >
               <div className={`w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex items-center justify-center p-2 sm:p-3 md:p-4 border border-gray-100 transition-all duration-300 ${isActive ? 'scale-125 shadow-2xl border-blue/20 ring-4 ring-blue/5' : 'hover:scale-110 hover:shadow-xl'}`}>
-                {item.logo ? (
-                  <Image 
-                    src={getStrapiURL(item.logo.url)} 
-                    alt={item.name} 
-                    width={48} 
-                    height={48} 
-                    className="object-contain w-full h-full"
-                    unoptimized
-                  />
-                ) : (
-                  <span className="text-[8px] sm:text-[10px] font-bold text-gray-400 tracking-tighter">{item.name.substring(0, 3)}</span>
-                )}
+                <Image 
+                  src={`/tsp/tools/${item.logo}`} 
+                  alt={item.name} 
+                  width={48} 
+                  height={48} 
+                  className="object-contain w-full h-full"
+                />
               </div>
               
               {isActive && (
@@ -122,3 +146,4 @@ export default function ProductDriven({ techItems }: { techItems: TechItem[] }) 
     </section>
   );
 }
+
