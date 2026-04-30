@@ -14,6 +14,7 @@ import HeroNewsAndInsights from "./components/all/HeroNewsAndInsights";
 import NewsAndInsightsGrid from "./components/all/NewsAndInsightsGrid";
 import ArticlesList from "./components/all/ArticlesList";
 import HeroWork from "./components/all/HeroWork";
+import AboutHero from "./components/all/AboutHero";
 
 import { fetchStrapi } from "./lib/strapi";
 
@@ -34,6 +35,7 @@ export default async function Home() {
       <ArticlesList />
       <HeroWork />
       <Info />
+      <AboutHero />
       <LetsTalk />
       <Footer />
     </div>
