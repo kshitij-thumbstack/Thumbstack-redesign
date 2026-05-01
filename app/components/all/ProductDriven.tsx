@@ -35,33 +35,38 @@ const TECH_TOOLS = [
 export default function ProductDriven() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
-  // Predefined relative positions to match the design roughly
+  // Positions arranged around the periphery, keeping center clear for text
   const positions = [
-    { top: "10%", left: "15%" },
-    { top: "15%", right: "20%" },
-    { bottom: "20%", left: "10%" },
-    { bottom: "15%", right: "15%" },
-    { top: "40%", left: "5%" },
-    { top: "50%", right: "8%" },
-    { bottom: "40%", left: "20%" },
-    { top: "25%", left: "45%" },
-    { bottom: "25%", right: "45%" },
-    { top: "10%", right: "40%" },
-    { bottom: "10%", left: "40%" },
-    { top: "70%", left: "15%" },
-    { top: "75%", right: "25%" },
-    { top: "5%", left: "30%" },
-    { bottom: "5%", right: "30%" },
-    { top: "60%", left: "35%" },
-    { top: "65%", right: "35%" },
-    { top: "35%", right: "55%" },
-    { bottom: "35%", left: "55%" },
-    { top: "85%", left: "45%" },
-    { top: "5%", right: "50%" },
-    { bottom: "5%", left: "50%" },
-    { top: "45%", left: "12%" },
-    { top: "55%", right: "12%" },
-    { top: "20%", left: "25%" },
+    // Top row
+    { top: "4%", left: "3%" },       // Flutter (top-left corner)
+    { top: "2%", left: "16%" },      // Shopify
+    { top: "1%", left: "35%" },      // Meta
+    { top: "8%", left: "55%" },      // 8thWall logo area
+    { top: "3%", left: "73%" },      // Segment
+    // Upper sides
+    { top: "14%", left: "9%" },      // 8thWall
+    { top: "12%", left: "25%" },     // Figma
+    { top: "10%", right: "3%" },     // Android
+    { top: "15%", right: "12%" },    // Group icon
+    { top: "20%", right: "25%" },    // ReactJS
+    // Middle sides (far left & right only)
+    { top: "38%", left: "1%" },      // Apple
+    { top: "32%", left: "10%" },     // Ollama
+    { top: "42%", right: "2%" },     // Next.js
+    { top: "28%", right: "5%" },     // Bitcoin/Group
+    // Lower sides
+    { top: "55%", left: "2%" },      // Ellipse
+    { top: "60%", left: "15%" },     // Midjourney
+    { top: "58%", right: "4%" },     // Nuxt
+    { top: "52%", right: "15%" },    // Vue/Mint
+    // Bottom row
+    { top: "72%", left: "20%" },     // Python
+    { top: "70%", left: "35%" },     // Segment alt
+    { top: "75%", right: "30%" },    // Ghost
+    { top: "78%", right: "15%" },    // Node
+    { top: "85%", left: "5%" },      // WordPress
+    { top: "82%", left: "28%" },     // Group 594
+    { top: "88%", right: "3%" },     // Group 598
   ];
 
   return (

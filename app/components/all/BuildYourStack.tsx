@@ -112,24 +112,24 @@ export default function BuildYourStack() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="w-full min-h-[80vh] bg-[#95E7D3] flex flex-col items-center justify-center snap-start relative px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 lg:py-32 md:pl-[90px]"
           >
-            <div className="flex flex-col items-center justify-center text-center max-w-4xl gap-4 sm:gap-5 md:gap-6">
+            <div className="flex flex-col items-center justify-center text-center gap-[18px]" style={{ width: "min(757px, 90vw)" }}>
               <h2
                 className="text-[#0F1D07] capitalize tracking-tight"
                 style={{
                   fontFamily: "var(--font-nohemi)",
-                  fontWeight: 500,
-                  fontSize: "clamp(48px, 10vw, 100.369px)",
-                  lineHeight: "134px",
+                  fontWeight: 600,
+                  fontSize: "clamp(40px, 8vw, 72px)",
+                  lineHeight: "1",
                 }}
               >
                 Build Your Stack.
               </h2>
               <p
-                className="text-[#0F1D07] opacity-80 max-w-[696px]"
+                className="text-[#0F1D07] max-w-[696px]"
                 style={{
                   fontFamily: "var(--font-satoshi)",
-                  fontWeight: 400,
-                  fontSize: "16px",
+                  fontWeight: 700,
+                  fontSize: "12px",
                   lineHeight: "30px",
                 }}
               >
@@ -138,12 +138,12 @@ export default function BuildYourStack() {
               <button
                 onClick={() => setStep(1)}
                 suppressHydrationWarning
-                className="group mt-6 sm:mt-8 px-5 sm:px-6 py-2.5 sm:py-3 bg-sidebar text-white rounded-xl sm:rounded-2xl flex items-center gap-3 hover:bg-black transition-colors font-semibold text-xs sm:text-sm"
+                className="group mt-6 sm:mt-8 px-5 sm:px-6 py-2.5 sm:py-3 bg-sidebar text-white rounded-xl sm:rounded-2xl flex items-center gap-3 hover:bg-black transition-colors font-semibold text-[10px] sm:text-xs"
               >
                 <span>Start Building</span>
                 <svg
-                  width="20"
-                  height="20"
+                  width="21"
+                  height="21"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -450,7 +450,7 @@ export default function BuildYourStack() {
             {/* Right Column - Preview & Stack */}
             <div className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-screen bg-[#95E7D3] p-8 md:p-12 lg:p-16 flex flex-col relative overflow-hidden">
               {/* Close Button */}
-              <button 
+              <button
                 onClick={() => setStep(0)}
                 className="absolute top-8 right-8 w-10 h-10 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center text-sidebar transition-colors z-50 backdrop-blur-sm shadow-sm"
               >
@@ -463,11 +463,11 @@ export default function BuildYourStack() {
                   <h3 className="text-base md:text-lg font-bold mb-6 text-sidebar text-center" style={{ fontFamily: "var(--font-satoshi)" }}>Nice! We&apos;ve built something like this before 👀</h3>
                   <div className="relative w-full aspect-[16/10] bg-white rounded-lg shadow-2xl overflow-visible mb-6">
                     <Image src="/stack.png" alt="Project preview" fill className="object-cover rounded-lg" />
-                    <motion.div 
+                    <motion.div
                       drag
                       dragConstraints={{ left: -30, right: 400, top: -30, bottom: 200 }}
                       whileDrag={{ scale: 1.1, cursor: "grabbing" }}
-                      className="absolute -left-10 top-1/2 -translate-y-1/2 w-20 h-20 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl text-[13px] font-bold text-sidebar cursor-grab z-20 border border-white" 
+                      className="absolute -left-10 top-1/2 -translate-y-1/2 w-20 h-20 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl text-[13px] font-bold text-sidebar cursor-grab z-20 border border-white"
                       style={{ fontFamily: "var(--font-satoshi)" }}
                     >
                       Preview
@@ -481,9 +481,9 @@ export default function BuildYourStack() {
 
               {/* Stack Visualizer */}
               <div className="absolute bottom-10 left-10 right-10 flex flex-col gap-3 z-20 max-w-lg mx-auto">
-                
+
                 {/* Add Layers Button */}
-                <button 
+                <button
                   onClick={() => setStep(3)}
                   className="w-full py-4 px-6 rounded-xl bg-[#B4F1E2] border border-sidebar/10 flex justify-center items-center gap-3 text-sidebar/60 text-sm hover:bg-white/20 transition-colors"
                   style={{ fontFamily: "var(--font-satoshi)" }}

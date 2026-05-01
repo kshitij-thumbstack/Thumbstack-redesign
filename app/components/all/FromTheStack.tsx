@@ -132,17 +132,17 @@ export default function FromTheStack() {
               From The Stack
             </h2>
             <p
-              className="text-sidebar/60 max-w-5xl text-xs sm:text-[13px] whitespace-nowrap"
+              className="text-sidebar max-w-5xl text-xs sm:text-[11px] whitespace-nowrap"
               style={{
                 fontFamily: "var(--font-satoshi)",
-                fontWeight: 500,
+                fontWeight: 700,
                 letterSpacing: "0%",
               }}
             >
               Our latest launches, experiments, and thoughts on what&apos;s shaping design and technology.
             </p>
           </div>
-          <Link href="#" className="flex items-center gap-2 text-sidebar font-bold text-xs md:text-base hover:opacity-70 transition-opacity mt-2 md:mt-0 shrink-0 whitespace-nowrap">
+          <Link href="#" className="flex items-center gap-2 text-sidebar font-bold text-xs md:text-base hover:opacity-70 transition-opacity mt-8 md:mt-10 shrink-0 whitespace-nowrap">
             Explore More
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
