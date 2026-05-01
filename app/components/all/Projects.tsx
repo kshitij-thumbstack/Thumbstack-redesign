@@ -63,7 +63,6 @@ function ProjectCard({
         zIndex: index + 1,
         marginTop: index === 0 ? "0" : "-5vh",
         backgroundColor: project.bg,
-        boxShadow: "0 -20px 50px rgba(0,0,0,0.3)",
       }}
     >
       <div
@@ -81,7 +80,7 @@ function ProjectCard({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm z-[200] flex items-center justify-center p-4 cursor-auto"
+              className="absolute inset-0 bg-black/50 z-[200] flex items-center justify-center p-4 cursor-auto"
               onClick={(e) => {
                 e.stopPropagation();
                 setModal(false);
@@ -182,7 +181,6 @@ function ProjectCard({
                 </div>
               );
             })()}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/10 pointer-events-none" />
           </div>
 
           <AnimatePresence>
@@ -209,7 +207,7 @@ function ProjectCard({
         </div>
 
         <div
-          className="flex-shrink-0 z-40 cursor-auto ml-0 md:ml-[110px] mr-0 md:mr-12 mb-8 px-4 md:px-6 py-6 md:h-[173px] w-full max-w-[1394px] md:rounded-t-[24px] md:rounded-b-none border-t border-white/10 flex items-center justify-center overflow-hidden"
+          className="flex-shrink-0 z-40 cursor-auto ml-0 md:ml-[90px] mr-0 md:mr-12 mb-8 px-4 md:px-6 py-6 md:h-[173px] w-full max-w-[1394px] md:rounded-t-[24px] md:rounded-b-none border-t border-white/10 flex items-center justify-center overflow-hidden"
           style={{
             backgroundColor:
               project.id === "bft"
@@ -217,7 +215,6 @@ function ProjectCard({
                 : project.id === "squlio"
                   ? "#665EE3"
                   : project.bg,
-            backgroundImage: "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 40%)",
           }}
           onClick={(e) => e.stopPropagation()}
         >
