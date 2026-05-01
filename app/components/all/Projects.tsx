@@ -189,14 +189,14 @@ function ProjectCard({
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}
-                className="fixed pointer-events-none z-[100] w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center font-bold text-sm md:text-lg shadow-2xl select-none will-change-transform"
+                className="fixed pointer-events-none z-[100] w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center font-bold text-[12px] md:text-[16px] shadow-2xl select-none will-change-transform"
                 style={{
                   left: smoothX,
                   top: smoothY,
                   translateX: "-50%",
                   translateY: "-50%",
-                  backgroundColor: project.cursorColor,
-                  color: project.accentColor,
+                  backgroundColor: "#95E7D3",
+                  color: "#0F1D07",
                   fontFamily: "var(--font-nohemi)",
                 }}
               >

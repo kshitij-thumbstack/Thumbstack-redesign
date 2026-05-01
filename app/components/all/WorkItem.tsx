@@ -40,7 +40,7 @@ export default function WorkItem() {
               {["Design", "E-Commerce", "AI"].map((tag) => (
                 <span
                   key={tag}
-                  className="px-[14px] py-[6px] border border-[#0F1D07] rounded-[10px] text-[12px] leading-[24px] font-bold tracking-tight"
+                  className="px-[14px] py-[6px] border border-[#0F1D07] rounded-[10px] text-[12px] leading-[24px] font-medium tracking-tight"
                   style={{ fontFamily: "var(--font-delight)", color: "#0F1D07" }}
                 >
                   {tag}
@@ -72,7 +72,7 @@ export default function WorkItem() {
             <div className="flex flex-col gap-5">
               {/* Quote */}
               <p
-                className="text-[22px] leading-[34px] font-bold capitalize"
+                className="text-[22px] leading-[34px] font-medium capitalize"
                 style={{ fontFamily: "var(--font-delight)", color: "#0F1D07" }}
               >
                 &ldquo;They didn&apos;t just Design our brand they helped us understand who we truly are.&rdquo;

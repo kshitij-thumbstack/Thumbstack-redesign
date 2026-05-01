@@ -117,7 +117,7 @@ export default function BuildYourStack() {
                 className="text-[#0F1D07] capitalize tracking-tight"
                 style={{
                   fontFamily: "var(--font-nohemi)",
-                  fontWeight: 600,
+                  fontWeight: 500,
                   fontSize: "clamp(40px, 8vw, 72px)",
                   lineHeight: "1",
                 }}
@@ -128,7 +128,7 @@ export default function BuildYourStack() {
                 className="text-[#0F1D07] max-w-[696px]"
                 style={{
                   fontFamily: "var(--font-satoshi)",
-                  fontWeight: 700,
+                  fontWeight: 500,
                   fontSize: "12px",
                   lineHeight: "30px",
                 }}
@@ -138,7 +138,7 @@ export default function BuildYourStack() {
               <button
                 onClick={() => setStep(1)}
                 suppressHydrationWarning
-                className="group mt-6 sm:mt-8 px-5 sm:px-6 py-2.5 sm:py-3 bg-sidebar text-white rounded-xl sm:rounded-2xl flex items-center gap-3 hover:bg-black transition-colors font-semibold text-[10px] sm:text-xs"
+                className="group mt-6 sm:mt-8 px-5 sm:px-6 py-2.5 sm:py-3 bg-sidebar text-white rounded-xl sm:rounded-2xl flex items-center gap-3 hover:bg-black transition-colors font-medium text-[10px] sm:text-xs"
               >
                 <span>Start Building</span>
                 <svg
@@ -212,7 +212,7 @@ export default function BuildYourStack() {
               </div>
             </div>
 
-            <button className="mt-16 sm:mt-20 px-8 sm:px-12 py-4 sm:py-5 bg-[#0B1510] text-white rounded-full flex items-center gap-3 sm:gap-4 hover:bg-black transition-all font-bold text-xs sm:text-sm md:text-lg group">
+            <button className="mt-16 sm:mt-20 px-8 sm:px-12 py-4 sm:py-5 bg-[#0B1510] text-white rounded-full flex items-center gap-3 sm:gap-4 hover:bg-black transition-all font-medium text-xs sm:text-sm md:text-lg group">
               Let&apos;s Take This Forward <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
             </button>
 
@@ -265,7 +265,7 @@ export default function BuildYourStack() {
                       <div
                         key={opt.id}
                         onClick={() => setJourney(opt.id)}
-                        className={`p-4 md:p-5 rounded-2xl border cursor-pointer transition-all ${journey === opt.id ? 'border-sidebar bg-sidebar/5' : 'border-gray-200 bg-white hover:border-gray-300'}`}
+                        className={`p-4 md:p-5 rounded-2xl border cursor-pointer transition-all ${journey === opt.id ? 'border-sidebar bg-sidebar/5' : 'border-gray-200 bg-[#EFF0FC] hover:border-gray-300'}`}
                       >
                         <div className="flex justify-between items-start mb-3">
                           <span className="text-xl">{opt.icon}</span>
@@ -310,7 +310,7 @@ export default function BuildYourStack() {
                       <div
                         key={opt.id}
                         onClick={() => setProduct(opt.id)}
-                        className={`p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 cursor-pointer transition-all ${product === opt.id ? 'border-sidebar bg-blue/5' : 'border-gray-100 bg-gray-50/50 hover:bg-gray-100'}`}
+                        className={`p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 cursor-pointer transition-all ${product === opt.id ? 'border-sidebar bg-blue/5' : 'border-gray-100 bg-[#EFF0FC] hover:bg-[#E2E4FF]'}`}
                       >
                         <div className="flex justify-between items-start mb-2 sm:mb-3 md:mb-4">
                           <span className="text-base sm:text-lg md:text-xl">{opt.icon}</span>
@@ -460,14 +460,14 @@ export default function BuildYourStack() {
               {/* Preview Content */}
               <div className="flex flex-col items-center justify-center flex-1 z-10 w-full max-w-lg mx-auto pb-48">
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center text-center">
-                  <h3 className="text-base md:text-lg font-bold mb-6 text-sidebar text-center" style={{ fontFamily: "var(--font-satoshi)" }}>Nice! We&apos;ve built something like this before 👀</h3>
+                  <h3 className="text-base md:text-lg font-medium mb-6 text-sidebar text-center" style={{ fontFamily: "var(--font-satoshi)" }}>Nice! We&apos;ve built something like this before 👀</h3>
                   <div className="relative w-full aspect-[16/10] bg-white rounded-lg shadow-2xl overflow-visible mb-6">
                     <Image src="/stack.png" alt="Project preview" fill className="object-cover rounded-lg" />
                     <motion.div
                       drag
                       dragConstraints={{ left: -30, right: 400, top: -30, bottom: 200 }}
                       whileDrag={{ scale: 1.1, cursor: "grabbing" }}
-                      className="absolute -left-10 top-1/2 -translate-y-1/2 w-20 h-20 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl text-[13px] font-bold text-sidebar cursor-grab z-20 border border-white"
+                      className="absolute -left-10 top-1/2 -translate-y-1/2 w-20 h-20 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl text-[13px] font-medium text-sidebar cursor-grab z-20 border border-white"
                       style={{ fontFamily: "var(--font-satoshi)" }}
                     >
                       Preview
@@ -488,7 +488,7 @@ export default function BuildYourStack() {
                   className="w-full py-4 px-6 rounded-xl bg-[#B4F1E2] border border-sidebar/10 flex justify-center items-center gap-3 text-sidebar/60 text-sm hover:bg-white/20 transition-colors"
                   style={{ fontFamily: "var(--font-satoshi)" }}
                 >
-                  <span className="font-semibold text-xs tracking-tight uppercase">Add product layers</span>
+                  <span className="font-medium text-xs tracking-tight uppercase">Add product layers</span>
                   <div className="w-5 h-5 border-2 border-dashed border-sidebar/40 rounded-full flex items-center justify-center text-xs">+</div>
                 </button>
 
@@ -497,7 +497,7 @@ export default function BuildYourStack() {
                   <div className="w-full py-3 px-4 rounded-xl bg-[#39B396] flex justify-between items-center text-white shadow-sm" style={{ fontFamily: "var(--font-satoshi)" }}>
                     <div className="flex flex-wrap gap-2 overflow-hidden">
                       {features.map(f => (
-                        <div key={f} className="px-3 py-1.5 bg-[#7DDEC7] rounded-lg text-[10px] font-bold text-sidebar uppercase tracking-tight">
+                        <div key={f} className="px-3 py-1.5 bg-[#7DDEC7] rounded-lg text-[10px] font-medium text-sidebar uppercase tracking-tight">
                           {f.replace('-', ' ')}
                         </div>
                       ))}

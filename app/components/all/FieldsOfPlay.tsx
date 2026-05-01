@@ -143,7 +143,7 @@ export default function FieldsOfPlay() {
               onMouseEnter={() => handleMouseEnter(field.id)}
               onMouseLeave={handleMouseLeave}
               className={`w-full group cursor-pointer transition-all duration-500 ease-in-out relative flex flex-col md:flex-row items-center ${
-                activeItem === field.id ? 'bg-[#0F1D07] py-10 sm:py-14 md:py-16 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-24 px-4 sm:px-6 md:px-8 lg:px-24 z-20' : 'bg-transparent py-8 border-b border-[#0F1D07]/20'
+                activeItem === field.id ? 'bg-[#0F1D07] py-10 sm:py-14 md:py-16 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-24 px-4 sm:px-6 md:px-8 lg:px-24 z-20' : 'bg-transparent py-8'
               }`}
             >
               <div className="flex flex-col gap-2 w-full md:w-1/2 md:pl-[104px]">
@@ -169,7 +169,7 @@ export default function FieldsOfPlay() {
                       className="text-white overflow-hidden"
                       style={{ 
                         fontFamily: "var(--font-satoshi)", 
-                        fontWeight: 700, 
+                        fontWeight: 500, 
                         fontSize: "16px", 
                         lineHeight: "24px",
                         maxWidth: "514px"
@@ -226,7 +226,7 @@ export default function FieldsOfPlay() {
 
               {/* Bottom Line (Vector 5) - Bolder */}
               <div 
-                className={`absolute bottom-0 left-0 w-full border-t-2 border-black transition-opacity ${activeItem === field.id ? 'opacity-0' : 'opacity-100'}`}
+                className={`absolute bottom-0 left-0 w-full border-t border-black transition-opacity ${activeItem === field.id ? 'opacity-0' : 'opacity-100'}`}
               />
             </div>
           ))}

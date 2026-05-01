@@ -65,17 +65,17 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
       {/* Card Content */}
       <div className="flex flex-col gap-2 sm:gap-3">
         <div className="flex justify-between items-start gap-2">
-          <h3 className="text-xs sm:text-sm md:text-xl lg:text-2xl font-bold tracking-tight text-sidebar">
+          <h3 className="text-xs sm:text-sm md:text-xl lg:text-2xl font-medium tracking-tight text-sidebar">
             {item.title}
           </h3>
-          <span className="px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 bg-blue/10 text-blue text-[10px] sm:text-xs md:text-xs font-bold rounded-full shrink-0">
+          <span className="px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 bg-blue/10 text-blue text-[10px] sm:text-xs md:text-xs font-medium rounded-full shrink-0">
             {item.tag}
           </span>
         </div>
         <p className="text-sidebar/70 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium line-clamp-2">
           {item.description}
         </p>
-        <Link href="#" className="flex items-center gap-1 sm:gap-2 text-sidebar font-bold text-[10px] sm:text-xs md:text-sm hover:underline w-fit">
+        <Link href="#" className="flex items-center gap-1 sm:gap-2 text-sidebar font-medium text-[10px] sm:text-xs md:text-sm hover:underline w-fit">
           Read Case Study
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -120,7 +120,7 @@ export default function FromTheStack() {
         <div className="flex flex-col md:flex-row justify-between items-start w-full gap-6 sm:gap-8">
           <div className="flex flex-col gap-3 sm:gap-4">
             <h2
-              className="text-sidebar font-bold"
+              className="text-sidebar font-medium"
               style={{
                 fontFamily: "var(--font-nohemi)",
                 fontSize: "clamp(2rem, 6vw, 84px)",
@@ -135,14 +135,14 @@ export default function FromTheStack() {
               className="text-sidebar max-w-5xl text-xs sm:text-[11px] whitespace-nowrap"
               style={{
                 fontFamily: "var(--font-satoshi)",
-                fontWeight: 700,
+                fontWeight: 500,
                 letterSpacing: "0%",
               }}
             >
               Our latest launches, experiments, and thoughts on what&apos;s shaping design and technology.
             </p>
           </div>
-          <Link href="#" className="flex items-center gap-2 text-sidebar font-bold text-xs md:text-base hover:opacity-70 transition-opacity mt-8 md:mt-10 shrink-0 whitespace-nowrap">
+          <Link href="#" className="flex items-center gap-2 text-sidebar font-medium text-xs md:text-base hover:opacity-70 transition-opacity mt-8 md:mt-10 shrink-0 whitespace-nowrap">
             Explore More
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

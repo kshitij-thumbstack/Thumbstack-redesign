@@ -6,14 +6,19 @@ import Sidebar from "../layout/Sidebar";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen w-full flex flex-col justify-between py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-white md:pl-[90px]">
+    <section className="min-h-screen w-full flex flex-col justify-between py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-white md:pl-[90px] overflow-hidden">
       <Sidebar />
+
       {/* Top row */}
-      <div className="flex justify-between items-start w-full max-w-[1400px] mx-auto pt-8">
-        <Link href="/services" className="text-foreground font-semibold text-xs md:text-base flex items-center gap-2 hover:underline">
+      <div className="flex justify-between items-start w-full max-w-[1400px] mx-auto pt-8 relative z-10">
+        <Link
+          href="/services"
+          className="text-[#0F1D07] font-semibold text-xs md:text-base flex items-center gap-2 hover:opacity-70 transition-opacity"
+          style={{ fontFamily: "var(--font-satoshi)" }}
+        >
           Our Services
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-[2px]">
-            <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </Link>
       </div>
@@ -21,61 +26,63 @@ export default function Hero() {
       {/* Main typography */}
       <div className="w-full max-w-[1400px] mx-auto flex-1 flex flex-col justify-center relative py-12">
         <h1
-          className="text-[clamp(2.5rem,10vw,7rem)] leading-[1.15] tracking-tighter max-w-[1200px]"
+          className="leading-[1.1] max-w-[1300px] select-none"
           style={{
             fontFamily: "var(--font-delight)",
-            fontWeight: 600
+            fontWeight: 600,
+            fontSize: "clamp(2.5rem, 9.5vw, 7rem)",
+            letterSpacing: "-0.01em", // -1% spacing as requested
+            color: "#3145DD"
           }}
         >
-          <span className="flex flex-wrap items-center gap-x-6 gap-y-4">
-            <span className="bg-mint text-[#3145DD] px-2 pb-1 md:px-5 md:pb-3 rounded-none inline-block">Designing</span>
-            <span className="text-[#3145DD]">and</span>
-            <span className="bg-[#3145DD] text-mint px-2 pb-1 md:px-5 md:pb-3 rounded-none inline-block">building</span>
+          {/* Locked row for "Designing and building" */}
+          <span className="flex items-center gap-x-3 md:gap-x-6 whitespace-nowrap">
+            <span className="bg-mint px-3 pb-1 md:px-6 md:pb-3 inline-block">Designing</span>
+            <span>and</span>
+            <span className="bg-[#3145DD] text-mint px-3 pb-1 md:px-6 md:pb-3 inline-block">building</span>
           </span>
-          <span className="text-[#3145DD] block mt-2">meaningful digital</span>
-          <span className="text-[#3145DD] block">experiences.</span>
+
+          <span className="block mt-2 md:mt-4">meaningful digital</span>
+          <span className="block">experiences.</span>
         </h1>
 
-        <div className="-mt-8 md:-mt-12 flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-8">
-          <div
-            className="flex flex-col"
-            style={{
-              maxWidth: "600px",
-            }}
-          >
+        {/* Sub-text and Decorative Circle */}
+        <div className="-mt-8 md:-mt-16 flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-8">
+          <div className="flex flex-col max-w-[650px]">
             <p
-              className="capitalize whitespace-nowrap"
+              className="capitalize"
               style={{
                 fontFamily: "var(--font-satoshi)",
                 fontWeight: 500,
-                fontSize: "22px",
-                lineHeight: "50px",
+                fontSize: "20px",
+                lineHeight: "1.6",
                 color: "#0F1D07",
               }}
             >
               We Build The Remarkable, Not The Routine.
             </p>
             <p
-              className="capitalize whitespace-nowrap"
+              className="capitalize"
               style={{
                 fontFamily: "var(--font-satoshi)",
                 fontWeight: 500,
-                fontSize: "22px",
-                lineHeight: "50px",
+                fontSize: "20px",
+                lineHeight: "1.6",
                 color: "#0F1D07",
               }}
             >
-              Thoughtfully Crafted. <span style={{ color: "#3145DD" }}>Bold In Execution.</span>
+              Thoughtfully Crafted. <span className="text-[#3145DD]">Bold In Execution.</span>
             </p>
           </div>
 
+          {/* Spinning Decorative Circle */}
           <div className="mr-0 md:mr-12 lg:mr-24 hidden sm:block">
-            <div className="relative w-32 h-32 md:w-48 md:h-48">
+            <div className="relative w-32 h-32 md:w-44 md:h-44">
               <Image
                 src="/circle.png"
                 alt="Decorative spinning circle"
                 fill
-                sizes="(max-width: 768px) 128px, 192px"
+                sizes="(max-width: 768px) 128px, 176px"
                 className="object-contain animate-[spin_20s_linear_infinite]"
               />
             </div>
@@ -83,12 +90,22 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom CTA */}
-      <div className="w-full max-w-[1400px] mx-auto flex justify-center pb-4 md:pb-8">
-        <a href="#work" className="text-foreground font-bold text-xs md:text-sm flex items-center gap-2 hover:opacity-75 transition-opacity">
+      {/* Bottom CTA (View Our Work) */}
+      <div className="w-full max-w-[1400px] mx-auto flex justify-center pb-8 md:pb-12 relative z-10">
+        <a
+          href="#work"
+          className="text-[#0F1D07] flex items-center gap-4 hover:opacity-70 transition-opacity"
+          style={{
+            fontFamily: "var(--font-satoshi)",
+            fontWeight: 700,
+            fontSize: "20px",
+            lineHeight: "54px",
+            textAlign: "center"
+          }}
+        >
           View Our Work
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="20" height="32" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V36M12 36L4 28M12 36L20 28" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </a>
       </div>

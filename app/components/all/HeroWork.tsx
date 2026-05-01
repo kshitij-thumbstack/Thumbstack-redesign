@@ -6,13 +6,13 @@ import Sidebar from "../layout/Sidebar";
 
 export default function HeroWork() {
   return (
-    <section className="min-h-screen w-full flex flex-col justify-center py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-[#3145DD] md:pl-[110px] overflow-hidden">
+    <section className="min-h-[120vh] w-full flex flex-col justify-start py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-[#3145DD] md:pl-[110px] overflow-hidden pt-64 md:pt-[45vh]">
       <Sidebar />
 
       {/* Background Glow */}
       <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-white/10 to-transparent pointer-events-none z-0" />
 
-      <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full relative z-10 gap-8">
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start justify-between h-full relative z-10 gap-8">
 
         {/* Left Content */}
         <div className="flex flex-col w-full lg:w-[70%]">
@@ -64,10 +64,10 @@ export default function HeroWork() {
         </div>
 
         {/* Right Content - Scaled Down Image Stack */}
-        <div className="w-full lg:w-[30%] flex flex-col items-end gap-6 lg:translate-x-12 xl:translate-x-20">
+        <div className="w-full lg:w-[30%] flex flex-col items-end gap-16 lg:translate-x-12 xl:translate-x-20">
 
-          {/* Top Card (Smaller Container) */}
-          <div className="relative group">
+          {/* Top Card (BFT) */}
+          <div className="relative group lg:-mt-64">
             {/* Floating Badge (Slightly smaller to match) */}
             <div
               className="absolute left-[-35px] top-[20%] w-[75px] h-[75px] bg-white/20 backdrop-blur-xl rounded-full flex flex-col items-center justify-center text-white border border-white/30 shadow-2xl z-20"
@@ -92,7 +92,7 @@ export default function HeroWork() {
 
           {/* Bottom Card (Smaller Container) */}
           <div
-            className="relative w-[280px] sm:w-[340px] lg:w-[380px] aspect-[4/3] bg-[#9EA3F1] rounded-[12px] p-3 shadow-2xl"
+            className="relative w-[280px] sm:w-[340px] lg:w-[380px] aspect-[4/3] bg-[#9EA3F1] rounded-[12px] p-3 shadow-2xl lg:mt-32"
           >
             <div className="relative w-full h-full rounded-lg overflow-hidden bg-white">
               <Image

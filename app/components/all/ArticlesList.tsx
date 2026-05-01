@@ -87,7 +87,7 @@ export default function ArticlesList() {
             style={{
               fontFamily: "var(--font-satoshi)",
               fontWeight: 400,
-              fontSize: "16px",
+              fontSize: "14px",
               lineHeight: "28px",
             }}
           >
@@ -95,31 +95,42 @@ export default function ArticlesList() {
           </p>
 
           {/* Right: heading + explore button */}
-          <div className="flex flex-col items-end gap-4 md:ml-auto">
-            {/* Explore More button */}
-            <Link
-              href="/our-work"
-              className="flex items-center gap-2 text-[#0F1D07] hover:opacity-60 transition-opacity"
-              style={{ fontFamily: "var(--font-satoshi)", fontWeight: 700, fontSize: "16px" }}
-            >
-              Explore More
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#0F1D07" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-
-            {/* Main Heading */}
+          <div className="flex flex-col items-end md:ml-auto">
             <h2
               className="text-[#0F1D07] text-right capitalize"
               style={{
                 fontFamily: "var(--font-delight)",
                 fontWeight: 500,
                 fontSize: "clamp(40px, 5.5vw, 80px)",
-                lineHeight: "clamp(48px, 7vw, 104px)",
+                lineHeight: "1.1",
               }}
             >
-              Articles Backed By<br />Real Work
+              Articles Backed By
             </h2>
+            <div className="flex items-center gap-8">
+              {/* Explore More button */}
+              <Link
+                href="/our-work"
+                className="flex items-center gap-2 text-[#0F1D07] hover:opacity-60 transition-opacity translate-y-2"
+                style={{ fontFamily: "var(--font-satoshi)", fontWeight: 700, fontSize: "16px" }}
+              >
+                Explore More
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#0F1D07" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+              <h2
+                className="text-[#0F1D07] text-right capitalize"
+                style={{
+                  fontFamily: "var(--font-delight)",
+                  fontWeight: 500,
+                  fontSize: "clamp(40px, 5.5vw, 80px)",
+                  lineHeight: "1.1",
+                }}
+              >
+                Real Work
+              </h2>
+            </div>
           </div>
 
           {/* Top decorative line */}
