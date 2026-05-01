@@ -36,19 +36,36 @@ export default function Hero() {
           <span className="text-[#3145DD] block">experiences.</span>
         </h1>
 
-        <div className="mt-8 md:mt-12 flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-8">
-          <div className="flex flex-col gap-2">
+        <div className="-mt-8 md:-mt-12 flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-8">
+          <div
+            className="flex flex-col"
+            style={{
+              maxWidth: "600px",
+            }}
+          >
             <p
-              className="text-foreground font-medium text-sm md:text-base"
-              style={{ fontFamily: "var(--font-satoshi)" }}
+              className="capitalize whitespace-nowrap"
+              style={{
+                fontFamily: "var(--font-satoshi)",
+                fontWeight: 500,
+                fontSize: "22px",
+                lineHeight: "50px",
+                color: "#0F1D07",
+              }}
             >
               We Build The Remarkable, Not The Routine.
             </p>
             <p
-              className="text-foreground font-medium text-sm md:text-base"
-              style={{ fontFamily: "var(--font-satoshi)" }}
+              className="capitalize whitespace-nowrap"
+              style={{
+                fontFamily: "var(--font-satoshi)",
+                fontWeight: 500,
+                fontSize: "22px",
+                lineHeight: "50px",
+                color: "#0F1D07",
+              }}
             >
-              Thoughtfully Crafted. <span className="text-blue">Bold In Execution.</span>
+              Thoughtfully Crafted. <span style={{ color: "#3145DD" }}>Bold In Execution.</span>
             </p>
           </div>
 

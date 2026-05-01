@@ -101,6 +101,7 @@ export default function WorkItem() {
             <button
               className="flex items-center justify-center gap-[8px] px-5 py-[8px] w-fit rounded-[14px] transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#0F1D07" }}
+              suppressHydrationWarning
             >
               <span className="text-[16px] leading-[32px] font-bold text-white" style={{ fontFamily: "var(--font-satoshi)" }}>
                 Start your story
