@@ -80,7 +80,7 @@ export default function PartnerBrands() {
                     className="w-32 md:w-40 px-4 py-4 md:px-6 md:py-6 bg-[#F5F5F5] rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-[#EFEFEF] hover:scale-105 cursor-pointer h-20 md:h-28 shadow-sm"
                   >
                     <Image
-                      src={`/tsp/${logo}`}
+                      src={`/TSP/${logo}`}
                       alt="Partner Brand Logo"
                       width={120}
                       height={80}

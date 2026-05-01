@@ -326,7 +326,7 @@ function Card({ card }: { card: CardType }) {
 
         {/* CTA */}
         <Link
-          href="#"
+          href="/news-and-insights/article"
           className="flex items-center gap-2 text-[#0F1D07] hover:opacity-60 transition-opacity w-fit"
           suppressHydrationWarning
           style={{
