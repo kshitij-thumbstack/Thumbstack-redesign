@@ -22,31 +22,31 @@ export default function FieldsOfPlay() {
       id: 0,
       title: "E-Commerce Experiences",
       subtitle: "Scalable e-commerce solutions that drive conversions and build brand loyalty.",
-      image: "/Store 1.png"
+      image: "/stack2.jpg"
     },
     {
       id: 1,
       title: "Custom Web Experiences",
       subtitle: "Custom-built platforms designed to scale with your brand’s ambition.",
-      image: "/custom product pages.png"
+      image: "/Campaign.png"
     },
     {
       id: 2,
       title: "Real Estate Expertise",
       subtitle: "High-end digital presentations for luxury real estate and developments.",
-      image: "/Home.png"
+      image: "/BFT1.png"
     },
     {
       id: 3,
       title: "Enterprise Platforms",
       subtitle: "Internal tools and complex dashboards that simplify business operations.",
-      image: "/BFT2.jpg"
+      image: "/BFT3.png"
     },
     {
       id: 4,
       title: "Mobile Apps",
       subtitle: "Performant iOS and Android applications built for modern users.",
-      image: "/Onboarding 7 (1) 1.png"
+      image: "/Campaign-1.png"
     }
   ];
 
