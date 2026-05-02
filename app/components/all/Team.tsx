@@ -60,7 +60,7 @@ export default function Team() {
                 color: "#0F1D07"
               }}
             >
-              Thumbstack is a design and technology studio focused on creating digital products that balance clarity with character. Working as an extension of our clients' teams, we combine thoughtful design, robust engineering, and a collaborative process to build experiences that are both visually refined and functionally strong.
+              Thumbstack is a design and technology studio focused on creating digital products that balance clarity with character. Working as an extension of our clients&apos; teams, we combine thoughtful design, robust engineering, and a collaborative process to build experiences that are both visually refined and functionally strong.
             </p>
           </div>
         </div>
