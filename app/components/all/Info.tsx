@@ -4,8 +4,9 @@ import Image from "next/image";
 
 export default function Info() {
   return (
-    <section className="relative w-full min-h-[551px] bg-[#3145DD] overflow-hidden flex items-center snap-start py-20">
-      {/* Background Ellipse */}
+    <section className="relative w-full h-[551px] bg-[#3145DD] overflow-hidden flex items-center snap-start">
+
+      {/* Ellipse 456 - The background glow effect */}
       <div
         className="absolute rounded-full pointer-events-none"
         style={{
@@ -14,20 +15,20 @@ export default function Info() {
           left: "489px",
           top: "-58px",
           background: "rgba(228, 249, 244, 0.18)",
-          filter: "blur(124px)",
+          filter: "blur(124.52px)",
         }}
       />
 
-      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24 relative z-10 h-full flex items-center">
-        {/* Text Content */}
-        <div className="flex flex-col items-start gap-4 w-full max-w-[899px]">
+      <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 relative z-10 h-full flex items-center">
+        {/* Text Container - Frame 2087326471 */}
+        <div className="flex flex-col items-start gap-[12px] w-full max-w-[899px]">
           <p
-            className="text-white opacity-80"
+            className="text-white opacity-90"
             style={{
               fontFamily: "var(--font-satoshi)",
-              fontWeight: 400,
               fontSize: "14px",
-              lineHeight: "28px",
+              lineHeight: "30px",
+              fontWeight: 400,
             }}
           >
             This is how we keep our work sharp, human, and meaningful.
@@ -37,9 +38,10 @@ export default function Info() {
             style={{
               fontFamily: "var(--font-delight)",
               fontWeight: 500,
-              fontSize: "clamp(26px, 4vw, 38px)",
-              lineHeight: "clamp(40px, 6vw, 58px)",
-              maxWidth: "868px"
+              fontSize: "38px",
+              lineHeight: "58px",
+              maxWidth: "868px",
+              textTransform: "capitalize",
             }}
           >
             We Work In Small Teams.<br />
@@ -49,33 +51,32 @@ export default function Info() {
         </div>
       </div>
 
-      {/* Image Container - Using exact Figma coordinates for Desktop */}
-      <div 
-        className="hidden lg:block absolute pointer-events-none z-20"
+      {/* Image Container - Component 141 */}
+      <div
+        className="absolute pointer-events-none z-20"
         style={{
           width: "520px",
           height: "520px",
-          left: "calc(50% - 520px/2 + 450px)",
-          top: "320px"
+          // Positioned to the right as per the visual reference
+          right: "0px",
+          bottom: "-60px",
         }}
       >
-        <div 
-          className="relative"
+        <div
+          className="relative w-full h-full"
           style={{
-            width: "367.15px",
-            height: "366.37px",
-            left: "38.81px",
-            top: "38.84px",
+            // This is the effect that makes it match the image glow
             mixBlendMode: "plus-lighter",
-            transform: "rotate(76.48deg)",
-            opacity: 1
+            // Corrected rotation: The CSS -76deg often flips it wrong in browsers
+            // -15deg to -20deg matches the 'flow' in your screenshot
+            transform: "rotate(-15deg)",
+            filter: "drop-shadow(0 20px 50px rgba(0,0,0,0.2))",
           }}
         >
-          <Image 
-            src="/Design.png" 
-            alt="Design graphic" 
-            fill 
-            sizes="367.15px"
+          <Image
+            src="/Design.png"
+            alt="Design graphic"
+            fill
             className="object-contain"
             priority
           />
