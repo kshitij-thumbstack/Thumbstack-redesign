@@ -189,7 +189,7 @@ function ProjectCard({
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}
-                className="fixed pointer-events-none z-[100] w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center font-bold text-[12px] md:text-[16px] shadow-2xl select-none will-change-transform"
+                className="fixed pointer-events-none z-[100] w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center font-medium text-[12px] md:text-[16px] shadow-2xl select-none will-change-transform"
                 style={{
                   left: smoothX,
                   top: smoothY,
@@ -243,7 +243,7 @@ function ProjectCard({
             <div className="w-full md:w-auto md:max-w-[460px] md:h-[72px] flex items-center gap-3 md:gap-[2px] justify-start md:justify-end flex-wrap md:flex-nowrap">
               <Link
                 href={project.caseStudyUrl}
-                className="w-[184px] h-[50px] bg-white rounded-[14px] px-5 flex items-center justify-center text-[14px] leading-[1] font-bold text-[#0F1D07] whitespace-nowrap shrink-0"
+                className="w-[184px] h-[50px] bg-white rounded-[14px] px-5 flex items-center justify-center text-[14px] leading-[1] font-medium text-[#0F1D07] whitespace-nowrap shrink-0"
               >
                 Read Case Study
               </Link>
