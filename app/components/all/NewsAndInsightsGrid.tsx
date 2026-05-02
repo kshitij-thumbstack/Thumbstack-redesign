@@ -117,8 +117,8 @@ const cards: CardType[] = [
 // ── Arrow Icon ──────────────────────────────────────────
 function Arrow() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#0F1D07" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -300,24 +300,24 @@ function Card({ card }: { card: CardType }) {
         {/* Text block */}
         <div className="flex flex-col gap-2 pr-36">
           <h3
-            className="text-[#0F1D07]"
+            className="text-black"
             style={{
               fontFamily: "var(--font-delight)",
               fontWeight: 400,
-              fontSize: 18,
-              lineHeight: "32px",
+              fontSize: 16,
+              lineHeight: "30px",
               letterSpacing: "-0.02em",
             }}
           >
             {card.title}
           </h3>
           <p
-            className="text-[#0F1D07]"
+            className="text-black"
             style={{
               fontFamily: "var(--font-satoshi)",
               fontWeight: 500,
-              fontSize: 14,
-              lineHeight: "24px",
+              fontSize: 12,
+              lineHeight: "22px",
             }}
           >
             {card.description}
@@ -327,7 +327,7 @@ function Card({ card }: { card: CardType }) {
         {/* CTA */}
         <Link
           href="/news-and-insights/article"
-          className="flex items-center gap-2 text-[#0F1D07] hover:opacity-60 transition-opacity w-fit"
+          className="flex items-center gap-2 text-black hover:opacity-60 transition-opacity w-fit"
           suppressHydrationWarning
           style={{
             fontFamily: "var(--font-satoshi)",

@@ -26,8 +26,8 @@ export default function Info() {
             style={{
               fontFamily: "var(--font-satoshi)",
               fontWeight: 400,
-              fontSize: "16px",
-              lineHeight: "30px",
+              fontSize: "14px",
+              lineHeight: "28px",
             }}
           >
             This is how we keep our work sharp, human, and meaningful.
@@ -37,8 +37,8 @@ export default function Info() {
             style={{
               fontFamily: "var(--font-delight)",
               fontWeight: 500,
-              fontSize: "clamp(28px, 4vw, 40px)",
-              lineHeight: "clamp(42px, 6vw, 60px)",
+              fontSize: "clamp(26px, 4vw, 38px)",
+              lineHeight: "clamp(40px, 6vw, 58px)",
               maxWidth: "868px"
             }}
           >
@@ -55,8 +55,8 @@ export default function Info() {
         style={{
           width: "520px",
           height: "520px",
-          left: "calc(50% - 520px/2 + 484px)",
-          top: "198px"
+          left: "calc(50% - 520px/2 + 450px)",
+          top: "320px"
         }}
       >
         <div 
@@ -64,10 +64,11 @@ export default function Info() {
           style={{
             width: "367.15px",
             height: "366.37px",
-            left: "calc(50% - 367.15px/2 - 37.62px)",
-            top: "calc(50% - 366.37px/2 - 37.98px)",
+            left: "38.81px",
+            top: "38.84px",
             mixBlendMode: "plus-lighter",
-            transform: "rotate(-76.48deg)"
+            transform: "rotate(76.48deg)",
+            opacity: 1
           }}
         >
           <Image 

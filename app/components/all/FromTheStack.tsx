@@ -65,19 +65,19 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
       {/* Card Content */}
       <div className="flex flex-col gap-2 sm:gap-3">
         <div className="flex justify-between items-start gap-2">
-          <h3 className="text-xs sm:text-sm md:text-xl lg:text-2xl font-medium tracking-tight text-sidebar">
+          <h3 className="text-[10px] sm:text-xs md:text-[18px] lg:text-[22px] font-medium tracking-tight text-sidebar">
             {item.title}
           </h3>
           <span className="px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 bg-blue/10 text-blue text-[10px] sm:text-xs md:text-xs font-medium rounded-full shrink-0">
             {item.tag}
           </span>
         </div>
-        <p className="text-sidebar/70 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium line-clamp-2">
+        <p className="text-black text-[10px] sm:text-xs md:text-sm lg:text-base font-medium line-clamp-2">
           {item.description}
         </p>
-        <Link href="#" className="flex items-center gap-1 sm:gap-2 text-sidebar font-medium text-[10px] sm:text-xs md:text-sm hover:underline w-fit">
+        <Link href="#" className="flex items-center gap-1 sm:gap-2 text-black font-medium text-[10px] sm:text-xs md:text-sm hover:underline w-fit">
           Read Case Study
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </Link>
