@@ -67,17 +67,24 @@ export default function PartnerBrands() {
         </h2>
 
         {/* Grid rows: 8, 7, 6, 5 */}
-        <div className="w-full flex flex-col items-center gap-3 md:gap-4">
+        <div className="w-full flex flex-col items-center gap-[10px]">
           {brandRows.map((row, rowIndex) => (
             <div
               key={`row-${rowIndex}`}
-              className="w-fit max-w-full flex flex-nowrap justify-center gap-3 md:gap-4"
+              className="w-fit max-w-full flex flex-nowrap justify-center gap-[10px]"
             >
               {row.map((logo, index) => {
                 return (
                   <div
                     key={`${rowIndex}-${index}`}
-                    className="w-32 md:w-40 px-4 py-4 md:px-6 md:py-6 bg-[#F5F5F5] rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-[#EFEFEF] hover:scale-105 cursor-pointer h-20 md:h-28 shadow-sm"
+                    className="flex items-center justify-center transition-all duration-300 hover:bg-[#EFEFEF] hover:scale-105 cursor-pointer shadow-sm"
+                    style={{
+                      width: "213px",
+                      height: "109px",
+                      padding: "28px 26px",
+                      background: "#F9F9F9",
+                      borderRadius: "24px"
+                    }}
                   >
                     <Image
                       src={`/TSP/${logo}`}

@@ -13,11 +13,11 @@ export default function Hero() {
       <div className="flex justify-between items-start w-full max-w-[1400px] mx-auto pt-8 relative z-10">
         <Link
           href="/services"
-          className="text-[#0F1D07] font-semibold text-xs md:text-base flex items-center gap-2 hover:opacity-70 transition-opacity"
+          className="text-[#0F1D07] font-semibold text-[14px] md:text-[18px] flex items-center gap-2 hover:opacity-70 transition-opacity"
           style={{ fontFamily: "var(--font-satoshi)" }}
         >
           Our Services
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </Link>

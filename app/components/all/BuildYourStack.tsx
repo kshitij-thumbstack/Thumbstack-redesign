@@ -128,7 +128,7 @@ export default function BuildYourStack() {
                 className="text-[#0F1D07] max-w-[696px]"
                 style={{
                   fontFamily: "var(--font-satoshi)",
-                  fontWeight: 500,
+                  fontWeight: 700,
                   fontSize: "12px",
                   lineHeight: "30px",
                 }}

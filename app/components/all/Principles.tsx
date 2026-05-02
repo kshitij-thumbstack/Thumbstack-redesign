@@ -14,17 +14,9 @@ export default function Principles() {
       desc: "We define what needs to be built, fixed, prioritised, or planned.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 16v-4" />
-          <path d="M12 8h.01" />
-          <path d="M12 2v2" />
-          <path d="M12 20v2" />
-          <path d="M4.93 4.93l1.41 1.41" />
-          <path d="M17.66 17.66l1.41 1.41" />
-          <path d="M2 12h2" />
-          <path d="M20 12h2" />
-          <path d="M4.93 19.07l1.41-1.41" />
-          <path d="M17.66 6.34l1.41-1.41" />
+          <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5" />
+          <path d="M9 18h6" />
+          <path d="M10 22h4" />
         </svg>
       )
     },
@@ -32,10 +24,11 @@ export default function Principles() {
       title: "Design",
       desc: "We shape the experience, interface, user journeys, and visual system.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-          <line x1="8" y1="21" x2="16" y2="21" />
-          <line x1="12" y1="17" x2="12" y2="21" />
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect width="18" height="8" x="2" y="2" rx="2" />
+          <path d="M6 10v7" />
+          <path d="M2 17h10" />
+          <path d="M7 22h1" />
         </svg>
       )
     },
@@ -53,19 +46,9 @@ export default function Principles() {
       title: "Grow",
       desc: "We maintain, improve, optimise, and support the product after launch.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2v2" />
-          <path d="M12 20v2" />
-          <path d="M4.93 4.93l1.41 1.41" />
-          <path d="M17.66 17.66l1.41 1.41" />
-          <path d="M2 12h2" />
-          <path d="M20 12h2" />
-          <path d="M4.93 19.07l1.41-1.41" />
-          <path d="M17.66 6.34l1.41-1.41" />
-          <path d="m12 12 4 4" />
-          <path d="m16 8-4 4" />
-          <path d="m8 8 4 4" />
-          <path d="m8 16 4-4" />
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="m12 3 1.91 5.89L20 10.8l-5.89 1.91L12 18.6l-1.91-5.89L4 10.8l5.89-1.91L12 3Z" />
+          <path d="m5 3 1 2.25L8.25 6.25 6 7.25 5 9.5 4 7.25 1.75 6.25 4 5.25 5 3Z" />
         </svg>
       )
     }

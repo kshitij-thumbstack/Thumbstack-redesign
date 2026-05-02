@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function WorkItem() {
   return (
-    <section className="w-full min-h-[967px] flex flex-col lg:flex-row items-center bg-white overflow-hidden">
+    <section className="w-full min-h-[967px] flex flex-col lg:flex-row items-center bg-white overflow-hidden md:pl-[70px]">
 
       {/* Left Side: Featured Image (Frame 2085663066) */}
-      <div className="relative w-full lg:w-[788px] h-[600px] lg:h-[967px] flex-shrink-0">
+      <div className="relative w-full lg:w-[788px] h-[600px] lg:h-[967px] flex-shrink-0 rounded-[24px] overflow-hidden">
         <Image
           src="/stack2.jpg" // Ensure this maps to your ASV06202-2.jpg
           alt="Case study featured project"

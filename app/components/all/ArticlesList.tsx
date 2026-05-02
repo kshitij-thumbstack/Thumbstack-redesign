@@ -151,7 +151,7 @@ export default function ArticlesList() {
                   : "bg-transparent py-6 md:py-8 border-b border-black"
               }`}
             >
-              <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-1/2 gap-2">
+              <div className="flex flex-col items-start w-full md:w-1/2 gap-1">
                 {/* Title */}
                 <h3
                   className={`transition-colors duration-300 ${
@@ -176,7 +176,7 @@ export default function ArticlesList() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-white/70 overflow-hidden md:ml-8"
+                      className="text-white/70 overflow-hidden"
                       style={{
                         fontFamily: "var(--font-satoshi)",
                         fontWeight: 400,

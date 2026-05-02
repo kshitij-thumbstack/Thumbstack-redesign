@@ -281,43 +281,45 @@ function Card({ card }: { card: CardType }) {
       </div>
 
       {/* Card Info */}
-      <div className="relative flex flex-col gap-[31px]">
-        {/* Tag badge — top right */}
-        <span
-          className="absolute right-0 top-0 flex items-center px-5 py-1 rounded-2xl"
-          style={{
-            background: "rgba(49,69,221,0.08)",
-            fontFamily: "var(--font-satoshi)",
-            fontWeight: 700,
-            fontSize: 12,
-            color: "#3145DD",
-            whiteSpace: "nowrap",
-          }}
-        >
-          {card.tag}
-        </span>
-
-        {/* Text block */}
-        <div className="flex flex-col gap-2 pr-36">
+      <div className="flex flex-col gap-5">
+        {/* Title and Tag Row */}
+        <div className="flex flex-row justify-between items-start gap-4">
           <h3
-            className="text-black"
+            className="text-black flex-1"
             style={{
               fontFamily: "var(--font-delight)",
               fontWeight: 400,
               fontSize: 16,
-              lineHeight: "30px",
+              lineHeight: "24px",
               letterSpacing: "-0.02em",
             }}
           >
             {card.title}
           </h3>
+          <span
+            className="flex items-center px-4 py-1 rounded-full shrink-0"
+            style={{
+              background: "rgba(49,69,221,0.08)",
+              fontFamily: "var(--font-satoshi)",
+              fontWeight: 700,
+              fontSize: 10,
+              color: "#3145DD",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {card.tag}
+          </span>
+        </div>
+
+        {/* Text block */}
+        <div className="flex flex-col gap-2">
           <p
             className="text-black"
             style={{
               fontFamily: "var(--font-satoshi)",
               fontWeight: 500,
               fontSize: 12,
-              lineHeight: "22px",
+              lineHeight: "18px",
             }}
           >
             {card.description}

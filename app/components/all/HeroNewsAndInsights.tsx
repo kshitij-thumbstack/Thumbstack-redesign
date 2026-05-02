@@ -5,7 +5,7 @@ import Sidebar from "../layout/Sidebar";
 
 export default function HeroNewsAndInsights() {
   return (
-    <section className="min-h-[130vh] w-full flex flex-col justify-start py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-[#3145DD] md:pl-[90px] overflow-hidden pt-64 md:pt-[45vh]">
+    <section className="min-h-[130vh] w-full flex flex-col justify-start py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-[#3145DD] md:pl-[90px] overflow-hidden pt-80 md:pt-[55vh]">
       <Sidebar />
 
       {/* Background Decoration - Glowing Oval */}
