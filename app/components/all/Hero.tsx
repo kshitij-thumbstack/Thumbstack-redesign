@@ -18,7 +18,7 @@ export default function Hero() {
         >
           Our Services
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </Link>
       </div>
@@ -97,15 +97,15 @@ export default function Hero() {
           className="text-[#0F1D07] flex items-center gap-4 hover:opacity-70 transition-opacity"
           style={{
             fontFamily: "var(--font-satoshi)",
-            fontWeight: 700,
+            fontWeight: 500,
             fontSize: "20px",
             lineHeight: "54px",
             textAlign: "center"
           }}
         >
           View Our Work
-          <svg width="20" height="32" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 4V36M12 36L4 28M12 36L20 28" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20M12 20L5 13M12 20L19 13" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </a>
       </div>
