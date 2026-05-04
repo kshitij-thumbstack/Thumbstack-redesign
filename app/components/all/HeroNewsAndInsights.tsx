@@ -5,7 +5,7 @@ import Sidebar from "../layout/Sidebar";
 
 export default function HeroNewsAndInsights() {
   return (
-    <section className="min-h-[100svh] w-full flex flex-col justify-start items-center pt-40 md:pt-64 pb-20 md:pb-32 px-8 lg:px-24 snap-start relative bg-[#3145DD] overflow-hidden">
+    <section className="min-h-[100svh] w-full flex flex-col justify-start items-center pt-[159px] md:pt-[255px] pb-20 md:pb-32 px-8 lg:px-24 snap-start relative bg-[#3145DD] overflow-hidden">
       <Sidebar />
 
       {/* Background Decoration - Glowing Oval */}
@@ -14,20 +14,20 @@ export default function HeroNewsAndInsights() {
       <div className="w-full max-w-[1400px] mx-auto flex flex-col gap-12 sm:gap-16 relative z-10">
         {/* Main typography */}
         <div className="flex flex-col relative z-10 mt-12 md:mt-20">
-          <Link 
-            href="#" 
-            className="text-white font-medium flex items-center gap-2 hover:opacity-75 transition-opacity mb-8 md:mb-12" 
-            style={{ fontFamily: "var(--font-satoshi)", fontSize: "15px" }}
+          <Link
+            href="#"
+            className="text-white font-medium flex items-center gap-2 hover:opacity-75 transition-opacity mb-8 md:mb-12"
+            style={{ fontFamily: "var(--font-satoshi)", fontSize: "15px", transform: 'translateY(-1px)' }}
           >
             Let&apos;s Build Together
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_6227_88259)">
-                <path d="M5 15L15 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M6.875 5H15V13.125" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M5 15L15 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M6.875 5H15V13.125" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </g>
               <defs>
                 <clipPath id="clip0_6227_88259">
-                  <rect width="20" height="20" fill="white"/>
+                  <rect width="20" height="20" fill="white" />
                 </clipPath>
               </defs>
             </svg>
@@ -50,8 +50,8 @@ export default function HeroNewsAndInsights() {
 
             <p
               className="text-white leading-[28px]"
-              style={{ 
-                fontFamily: "var(--font-satoshi)", 
+              style={{
+                fontFamily: "var(--font-satoshi)",
                 fontWeight: 700,
                 fontSize: "14px",
                 maxWidth: "465px"

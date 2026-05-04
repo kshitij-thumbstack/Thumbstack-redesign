@@ -6,7 +6,7 @@ import Sidebar from "../layout/Sidebar";
 
 export default function HeroWork() {
   return (
-    <section className="min-h-[120vh] w-full flex flex-col justify-start py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-[#3145DD] md:pl-[110px] overflow-hidden pt-80 md:pt-[55vh]">
+    <section className="min-h-[120vh] w-full flex flex-col justify-start py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-[#3145DD] md:pl-[110px] overflow-hidden pt-[240px] md:pt-[45vh]">
       <Sidebar />
 
       {/* Background Glow */}
@@ -16,18 +16,23 @@ export default function HeroWork() {
 
         {/* Left Content */}
         <div className="flex flex-col w-full lg:w-[70%] lg:mt-32">
-          <div className="mb-8">
-            <Link
-              href="#"
-              className="text-white font-medium flex items-center gap-2 hover:opacity-75 transition-opacity"
-              style={{
-                fontFamily: "var(--font-satoshi)",
-                fontSize: "14px" // Reduced by 2px from the previous 16px
-              }}
+          <div className="mb-16">
+            <Link 
+              href="#" 
+              className="text-white font-medium flex items-center gap-2 hover:opacity-75 transition-opacity" 
+              style={{ fontFamily: "var(--font-satoshi)", fontSize: "15px", transform: 'translateY(-10px)' }}
             >
               Let&apos;s Build Together
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0_6227_88259)">
+                  <path d="M5 15L15 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M6.875 5H15V13.125" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6227_88259">
+                    <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                </defs>
               </svg>
             </Link>
           </div>
@@ -49,8 +54,8 @@ export default function HeroWork() {
 
             <p
               className="text-white max-w-[553px] mt-10"
-              style={{
-                fontFamily: "var(--font-satoshi)",
+              style={{ 
+                fontFamily: "var(--font-satoshi)", 
                 fontWeight: 700,
                 fontSize: "12px",
                 lineHeight: "28px",
@@ -68,7 +73,7 @@ export default function HeroWork() {
 
           {/* Top Card (BFT) */}
           <div className="relative group lg:-mt-64">
-            {/* Floating Badge (Slightly smaller to match) */}
+            {/* Floating Badge */}
             <div
               className="absolute left-[-35px] top-[20%] w-[75px] h-[75px] bg-white/20 backdrop-blur-xl rounded-full flex flex-col items-center justify-center text-white border border-white/30 shadow-2xl z-20"
             >
@@ -90,7 +95,7 @@ export default function HeroWork() {
             </div>
           </div>
 
-          {/* Bottom Card (Smaller Container) */}
+          {/* Bottom Card */}
           <div
             className="relative w-[280px] sm:w-[340px] lg:w-[420px] aspect-[4/3] bg-[#9EA3F1] rounded-[12px] p-6 shadow-2xl lg:mt-8"
           >
