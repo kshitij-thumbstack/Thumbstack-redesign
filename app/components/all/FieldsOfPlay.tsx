@@ -144,7 +144,7 @@ export default function FieldsOfPlay() {
 
         {/* Interactive List (Restored Layout Behavior) */}
         <div
-          className="lg:absolute lg:left-[calc(50%_-_1391px/2_+_0.5px)] lg:top-[420px] w-full max-w-[1391px] flex flex-col gap-y-2 isolation-isolate"
+          className="lg:absolute lg:left-[calc(50%_-_1391px/2_+_0.5px)] lg:top-[420px] w-full max-w-[1391px] flex flex-col border-t border-black isolation-isolate"
         >
           {fields.map((field) => (
             <div
@@ -153,7 +153,7 @@ export default function FieldsOfPlay() {
               onMouseLeave={handleMouseLeave}
               className={`w-full group cursor-pointer transition-all duration-500 ease-in-out relative flex flex-col md:flex-row items-center ${activeItem === field.id
                 ? 'py-8 sm:py-12 md:py-14 before:content-[""] before:absolute before:inset-0 before:bg-[#0F1D07] before:w-[100vw] before:left-1/2 before:-translate-x-1/2 before:z-[-1] z-20'
-                : 'bg-transparent py-4'
+                : 'bg-transparent py-6 md:py-8 border-b border-black'
                 }`}
             >
               <div className="flex flex-col gap-2 w-full md:w-1/2 md:pl-[104px]">

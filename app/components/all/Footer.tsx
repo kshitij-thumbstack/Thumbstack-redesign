@@ -37,8 +37,8 @@ export default function Footer() {
             </h2>
 
             <div className="flex flex-col gap-2" style={{ fontFamily: "var(--font-satoshi)" }}>
-              <p className="text-white text-lg font-medium">Let&apos;s make something amazing together.</p>
-              <p className="text-white/60 text-sm max-w-md">Come chat with us — we&apos;ve got coffee (or tea) ready and are always up for a good conversation.</p>
+              <p className="text-white text-base font-medium">Let&apos;s make something amazing together.</p>
+              <p className="text-white/60 text-xs max-w-md">Come chat with us — we&apos;ve got coffee (or tea) ready and are always up for a good conversation.</p>
             </div>
 
             {/* Social Icons */}
@@ -84,8 +84,8 @@ export default function Footer() {
               <div key={office.city} className="flex flex-col gap-2">
                 <p className="text-white text-sm font-bold">{office.city}</p>
                 <a href={`tel:${office.phone}`} className="text-white text-sm font-bold underline underline-offset-4 decoration-white/30 hover:decoration-white">{office.phone}</a>
-                <p className="text-white/60 text-[13px] leading-relaxed max-w-[280px] mt-1">{office.address}</p>
-                <a href={`mailto:${office.email}`} className="text-white/60 text-[13px] hover:text-white transition-colors">{office.email}</a>
+                <p className="text-white text-[11px] font-bold leading-relaxed max-w-[280px] mt-1">{office.address}</p>
+                <a href={`mailto:${office.email}`} className="text-white text-[11px] font-bold hover:text-white transition-colors">{office.email}</a>
               </div>
             ))}
           </div>

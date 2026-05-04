@@ -13,7 +13,7 @@ export default function Principles() {
       title: "Strategise",
       desc: "We define what needs to be built, fixed, prioritised, or planned.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_bulb)">
             <path opacity="0.2" d="M9.8375 20.875C8.64872 19.9463 7.68583 18.7604 7.02118 17.4062C6.35653 16.052 6.00739 14.5648 6 13.0563C5.97 7.63625 10.34 3.125 15.7588 3C17.8588 2.94914 19.9215 3.56088 21.6542 4.74843C23.3869 5.93598 24.7017 7.63903 25.412 9.61594C26.1222 11.5929 26.1919 13.7432 25.6111 15.762C25.0303 17.7807 23.8285 19.5653 22.1763 20.8625C21.8118 21.1451 21.5165 21.5069 21.3127 21.9206C21.1089 22.3342 21.002 22.7889 21 23.25V24C21 24.2652 20.8946 24.5196 20.7071 24.7071C20.5196 24.8946 20.2652 25 20 25H12C11.7348 25 11.4804 24.8946 11.2929 24.7071C11.1054 24.5196 11 24.2652 11 24V23.25C10.9995 22.7918 10.8946 22.3397 10.6931 21.9282C10.4917 21.5167 10.1991 21.1565 9.8375 20.875Z" fill="white" />
             <path d="M11 29H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -32,7 +32,7 @@ export default function Principles() {
       title: "Design",
       desc: "We shape the experience, interface, user journeys, and visual system.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_design)">
             <path opacity="0.2" d="M25 7H6C5.44772 7 5 7.44772 5 8V16C5 16.5523 5.44772 17 6 17H25C25.5523 17 26 16.5523 26 16V8C26 7.44772 25.5523 7 25 7Z" fill="white" />
             <path d="M25 7H6C5.44772 7 5 7.44772 5 8V16C5 16.5523 5.44772 17 6 17H25C25.5523 17 26 16.5523 26 16V8C26 7.44772 25.5523 7 25 7Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -51,7 +51,7 @@ export default function Principles() {
       title: "Build",
       desc: "We develop the website, store, app, platform, CMS, integrations, or backend system.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <polyline points="16 18 22 12 16 6" />
           <polyline points="8 6 2 12 8 18" />
         </svg>
@@ -61,7 +61,7 @@ export default function Principles() {
       title: "Grow",
       desc: "We maintain, improve, optimise, and support the product after launch.",
       icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_6495_1189)">
             <path opacity="0.2" d="M10.5337 21.4662L3.64749 18.9287C3.45761 18.8587 3.29377 18.732 3.17806 18.566C3.06234 18.3999 3.00031 18.2024 3.00031 18C3.00031 17.7976 3.06234 17.6 3.17806 17.434C3.29377 17.2679 3.45761 17.1413 3.64749 17.0712L10.5337 14.5337L13.0712 7.64749C13.1413 7.45761 13.2679 7.29377 13.434 7.17806C13.6 7.06234 13.7976 7.00031 14 7.00031C14.2024 7.00031 14.3999 7.06234 14.566 7.17806C14.732 7.29377 14.8587 7.45761 14.9287 7.64749L17.4662 14.5337L24.3525 17.0712C24.5424 17.1413 24.7062 17.2679 24.8219 17.434C24.9376 17.6 24.9997 17.7976 24.9997 18C24.9997 18.2024 24.9376 18.3999 24.8219 18.566C24.7062 18.732 24.5424 18.8587 24.3525 18.9287L17.4662 21.4662L14.9287 28.3525C14.8587 28.5424 14.732 28.7062 14.566 28.8219C14.3999 28.9376 14.2024 28.9997 14 28.9997C13.7976 28.9997 13.6 28.9376 13.434 28.8219C13.2679 28.7062 13.1413 28.5424 13.0712 28.3525L10.5337 21.4662Z" fill="white" />
             <path d="M10.5337 21.4662L3.64749 18.9287C3.45761 18.8587 3.29377 18.732 3.17806 18.566C3.06234 18.3999 3.00031 18.2024 3.00031 18C3.00031 17.7976 3.06234 17.6 3.17806 17.434C3.29377 17.2679 3.45761 17.1413 3.64749 17.0712L10.5337 14.5337L13.0712 7.64749C13.1413 7.45761 13.2679 7.29377 13.434 7.17806C13.6 7.06234 13.7976 7.00031 14 7.00031C14.2024 7.00031 14.3999 7.06234 14.566 7.17806C14.732 7.29377 14.8587 7.45761 14.9287 7.64749L17.4662 14.5337L24.3525 17.0712C24.5424 17.1413 24.7062 17.2679 24.8219 17.434C24.9376 17.6 24.9997 17.7976 24.9997 18C24.9997 18.2024 24.9376 18.3999 24.8219 18.566C24.7062 18.732 24.5424 18.8587 24.3525 18.9287L17.4662 21.4662L14.9287 28.3525C14.8587 28.5424 14.732 28.7062 14.566 28.8219C14.3999 28.9376 14.2024 28.9997 14 28.9997C13.7976 28.9997 13.6 28.9376 13.434 28.8219C13.2679 28.7062 13.1413 28.5424 13.0712 28.3525L10.5337 21.4662Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -178,7 +178,7 @@ export default function Principles() {
               className="flex flex-col items-start gap-4 p-8 rounded-2xl transition-colors duration-300 cursor-pointer"
             >
               {/* Icon Container */}
-              <div className="w-[30px] h-[30px] flex items-center justify-center text-white mb-4">
+              <div className="w-[32px] h-[32px] flex items-center justify-center text-white mb-4">
                 {p.icon}
               </div>
               {/* Text */}

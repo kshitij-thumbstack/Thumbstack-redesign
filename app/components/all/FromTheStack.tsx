@@ -65,8 +65,16 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
         </p>
         <Link href="#" className="flex items-center gap-1 sm:gap-2 text-black font-medium text-[10px] sm:text-xs md:text-sm hover:underline w-fit">
           Read Case Study
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_6227_81831)">
+              <path d="M5 15L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M6.875 5H15V13.125" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_6227_81831">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
           </svg>
         </Link>
       </div>
@@ -149,7 +157,7 @@ export default function FromTheStack() {
               className="text-sidebar max-w-5xl text-xs sm:text-[11px] whitespace-nowrap"
               style={{
                 fontFamily: "var(--font-satoshi)",
-                fontWeight: 500,
+                fontWeight: 700,
                 letterSpacing: "0%",
               }}
             >
@@ -158,8 +166,16 @@ export default function FromTheStack() {
           </div>
           <Link href="#" className="flex items-center gap-2 text-sidebar font-medium text-xs md:text-base hover:opacity-70 transition-opacity mt-8 md:mt-10 shrink-0 whitespace-nowrap">
             Explore More
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clipPath="url(#clip0_6227_81744)">
+                <path d="M5 15L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6.875 5H15V13.125" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_6227_81744">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
             </svg>
           </Link>
         </div>
