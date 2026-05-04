@@ -13,10 +13,18 @@ export default function Principles() {
       title: "Strategise",
       desc: "We define what needs to be built, fixed, prioritised, or planned.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5" />
-          <path d="M9 18h6" />
-          <path d="M10 22h4" />
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clipPath="url(#clip0_bulb)">
+            <path opacity="0.2" d="M9.8375 20.875C8.64872 19.9463 7.68583 18.7604 7.02118 17.4062C6.35653 16.052 6.00739 14.5648 6 13.0563C5.97 7.63625 10.34 3.125 15.7588 3C17.8588 2.94914 19.9215 3.56088 21.6542 4.74843C23.3869 5.93598 24.7017 7.63903 25.412 9.61594C26.1222 11.5929 26.1919 13.7432 25.6111 15.762C25.0303 17.7807 23.8285 19.5653 22.1763 20.8625C21.8118 21.1451 21.5165 21.5069 21.3127 21.9206C21.1089 22.3342 21.002 22.7889 21 23.25V24C21 24.2652 20.8946 24.5196 20.7071 24.7071C20.5196 24.8946 20.2652 25 20 25H12C11.7348 25 11.4804 24.8946 11.2929 24.7071C11.1054 24.5196 11 24.2652 11 24V23.25C10.9995 22.7918 10.8946 22.3397 10.6931 21.9282C10.4917 21.5167 10.1991 21.1565 9.8375 20.875Z" fill="white" />
+            <path d="M11 29H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M9.8375 20.875C8.64872 19.9463 7.68583 18.7604 7.02118 17.4062C6.35653 16.052 6.00739 14.5648 6 13.0563C5.97 7.63625 10.34 3.125 15.7588 3C17.8588 2.94914 19.9215 3.56088 21.6542 4.74843C23.3869 5.93598 24.7017 7.63903 25.412 9.61594C26.1222 11.5929 26.1919 13.7432 25.6111 15.762C25.0303 17.7807 23.8285 19.5653 22.1763 20.8625C21.8118 21.1451 21.5165 21.5069 21.3127 21.9206C21.1089 22.3342 21.002 22.7889 21 23.25V24C21 24.2652 20.8946 24.5196 20.7071 24.7071C20.5196 24.8946 20.2652 25 20 25H12C11.7348 25 11.4804 24.8946 11.2929 24.7071C11.1054 24.5196 11 24.2652 11 24V23.25C10.9995 22.7918 10.8946 22.3397 10.6931 21.9282C10.4917 21.5167 10.1991 21.1565 9.8375 20.875Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M17 7C19.5 7.42125 21.5762 9.5 22 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </g>
+          <defs>
+            <clipPath id="clip0_bulb">
+              <rect width="32" height="32" fill="white" />
+            </clipPath>
+          </defs>
         </svg>
       )
     },
@@ -24,11 +32,18 @@ export default function Principles() {
       title: "Design",
       desc: "We shape the experience, interface, user journeys, and visual system.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect width="18" height="8" x="2" y="2" rx="2" />
-          <path d="M6 10v7" />
-          <path d="M2 17h10" />
-          <path d="M7 22h1" />
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clipPath="url(#clip0_design)">
+            <path opacity="0.2" d="M25 7H6C5.44772 7 5 7.44772 5 8V16C5 16.5523 5.44772 17 6 17H25C25.5523 17 26 16.5523 26 16V8C26 7.44772 25.5523 7 25 7Z" fill="white" />
+            <path d="M25 7H6C5.44772 7 5 7.44772 5 8V16C5 16.5523 5.44772 17 6 17H25C25.5523 17 26 16.5523 26 16V8C26 7.44772 25.5523 7 25 7Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M26 12H29C29.2652 12 29.5196 12.1054 29.7071 12.2929C29.8946 12.4804 30 12.7348 30 13V19.25C30 19.4672 29.9292 19.6785 29.7984 19.852C29.6676 20.0254 29.4839 20.1515 29.275 20.2113L16.725 23.7925C16.5168 23.8521 16.3335 23.9776 16.2027 24.1503C16.072 24.323 16.0009 24.5334 16 24.75V29" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M5 12H2" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </g>
+          <defs>
+            <clipPath id="clip0_design">
+              <rect width="32" height="32" fill="white" />
+            </clipPath>
+          </defs>
         </svg>
       )
     },
@@ -151,8 +166,8 @@ export default function Principles() {
               whileTap={{ scale: 0.98 }}
               className="flex flex-col items-start gap-4 p-8 rounded-2xl transition-colors duration-300 cursor-pointer"
             >
-              {/* Icon */}
-              <div className="w-10 h-10 flex items-center justify-center text-white mb-2">
+              {/* Icon Container */}
+              <div className="w-[30px] h-[30px] flex items-center justify-center text-white mb-4">
                 {p.icon}
               </div>
               {/* Text */}
@@ -162,20 +177,20 @@ export default function Principles() {
                   style={{
                     fontFamily: "var(--font-satoshi)",
                     fontWeight: 700,
-                    fontSize: "28px",
-                    lineHeight: "1"
+                    fontSize: "34px",
+                    lineHeight: "46px"
                   }}
                 >
                   {p.title}
                 </h3>
                 <p
-                  className="text-white/60"
+                  className="text-white opacity-60"
                   style={{
                     fontFamily: "var(--font-satoshi)",
-                    fontWeight: 400,
-                    fontSize: "11px",
-                    lineHeight: "1.6",
-                    maxWidth: "380px"
+                    fontWeight: 700,
+                    fontSize: "14px",
+                    lineHeight: "26px",
+                    maxWidth: "625.5px"
                   }}
                 >
                   {p.desc}

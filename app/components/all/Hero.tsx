@@ -6,11 +6,11 @@ import Sidebar from "../layout/Sidebar";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen w-full flex flex-col justify-between py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-white md:pl-[90px] overflow-hidden">
+    <section className="min-h-screen w-full flex flex-col justify-between pt-40 pb-12 px-6 md:px-12 lg:px-24 snap-start relative bg-white md:pl-[90px] overflow-hidden">
       <Sidebar />
 
       {/* Top row */}
-      <div className="flex justify-between items-start w-full max-w-[1400px] mx-auto pt-8 relative z-10">
+      <div className="flex justify-between items-start w-full max-w-[1400px] mx-auto pt-0 relative z-10">
         <Link
           href="/services"
           className="text-[#0F1D07] font-semibold text-[14px] md:text-[18px] flex items-center gap-2 hover:opacity-70 transition-opacity"
@@ -24,7 +24,7 @@ export default function Hero() {
       </div>
 
       {/* Main typography */}
-      <div className="w-full max-w-[1400px] mx-auto flex-1 flex flex-col justify-center relative py-12">
+      <div className="w-full max-w-[1400px] mx-auto flex-1 flex flex-col justify-start relative py-6 mt-4">
         <h1
           className="leading-[1.1] max-w-[1300px] select-none"
           style={{

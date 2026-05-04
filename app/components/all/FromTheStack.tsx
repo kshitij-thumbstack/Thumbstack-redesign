@@ -65,7 +65,13 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
       {/* Card Content */}
       <div className="flex flex-col gap-2 sm:gap-3">
         <div className="flex justify-between items-start gap-2">
-          <h3 className="text-[10px] sm:text-xs md:text-[18px] lg:text-[22px] font-medium tracking-tight text-sidebar">
+          <h3
+            className="text-[10px] sm:text-xs md:text-[18px] lg:text-[20px] tracking-tight text-sidebar"
+            style={{
+              fontFamily: "var(--font-delight)",
+              fontWeight: 400
+            }}
+          >
             {item.title}
           </h3>
           <span className="px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 bg-blue/10 text-blue text-[10px] sm:text-xs md:text-xs font-medium rounded-full shrink-0">
