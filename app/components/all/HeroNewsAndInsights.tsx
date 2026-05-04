@@ -40,8 +40,8 @@ export default function HeroNewsAndInsights() {
           </h1>
 
           <p
-            className="text-white/80 text-sm md:text-base max-w-xl leading-relaxed"
-            style={{ fontFamily: "var(--font-satoshi)" }}
+            className="text-white/60 text-sm md:text-base max-w-xl leading-relaxed"
+            style={{ fontFamily: "var(--font-satoshi)", fontWeight: 700 }}
           >
             We document what we learn — from design sprints to engineering breakthroughs,
             new project launches, experiments, and small discoveries that move our work forward.
