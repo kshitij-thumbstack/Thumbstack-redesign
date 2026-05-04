@@ -147,7 +147,7 @@ export default function ArticlesList() {
               onClick={() => setActiveItem(article.id)}
               className={`w-full group cursor-pointer transition-all duration-500 ease-in-out relative ${
                 activeItem === article.id
-                  ? "bg-[#0F1D07] py-8 md:py-12 -mx-6 md:-mx-12 lg:-mx-24 px-6 md:px-12 lg:px-24 border-none shadow-2xl z-20"
+                  ? "py-8 md:py-12 before:content-[''] before:absolute before:inset-0 before:bg-[#0F1D07] before:w-[100vw] before:left-1/2 before:-translate-x-1/2 before:z-[-1] border-none shadow-2xl z-20"
                   : "bg-transparent py-6 md:py-8 border-b border-black"
               }`}
             >

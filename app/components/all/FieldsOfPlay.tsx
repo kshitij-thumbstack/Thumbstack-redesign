@@ -107,8 +107,16 @@ export default function FieldsOfPlay() {
             >
               Let&apos;s Build Together
             </span>
-            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-[#0F1D07]">
-              <path d="M5.83334 14.1667L14.1667 5.83333M14.1667 5.83333H5.83334M14.1667 5.83333V14.1667" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clipPath="url(#clip0_6227_81067)">
+                <path d="M5 15L15 5" stroke="#0F1D07" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6.875 5H15V13.125" stroke="#0F1D07" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_6227_81067">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
             </svg>
           </div>
         </div>
@@ -136,7 +144,7 @@ export default function FieldsOfPlay() {
 
         {/* Interactive List (Restored Layout Behavior) */}
         <div
-          className="lg:absolute lg:left-[calc(50%_-_1391px/2_+_0.5px)] lg:top-[420px] w-full max-w-[1391px] flex flex-col gap-y-[40px] isolation-isolate"
+          className="lg:absolute lg:left-[calc(50%_-_1391px/2_+_0.5px)] lg:top-[420px] w-full max-w-[1391px] flex flex-col gap-y-2 isolation-isolate"
         >
           {fields.map((field) => (
             <div
@@ -144,8 +152,8 @@ export default function FieldsOfPlay() {
               onMouseEnter={() => handleMouseEnter(field.id)}
               onMouseLeave={handleMouseLeave}
               className={`w-full group cursor-pointer transition-all duration-500 ease-in-out relative flex flex-col md:flex-row items-center ${activeItem === field.id
-                ? 'bg-[#0F1D07] py-10 sm:py-14 md:py-16 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-24 px-4 sm:px-6 md:px-8 lg:px-24 z-20'
-                : 'bg-transparent pb-[24px]'
+                ? 'py-8 sm:py-12 md:py-14 before:content-[""] before:absolute before:inset-0 before:bg-[#0F1D07] before:w-[100vw] before:left-1/2 before:-translate-x-1/2 before:z-[-1] z-20'
+                : 'bg-transparent py-4'
                 }`}
             >
               <div className="flex flex-col gap-2 w-full md:w-1/2 md:pl-[104px]">
@@ -168,13 +176,12 @@ export default function FieldsOfPlay() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="text-white overflow-hidden"
+                      className="text-white overflow-hidden whitespace-nowrap"
                       style={{
                         fontFamily: "var(--font-satoshi)",
                         fontWeight: 400,
                         fontSize: "16px",
-                        lineHeight: "39px",
-                        maxWidth: "514px"
+                        lineHeight: "39px"
                       }}
                     >
                       {field.subtitle}
