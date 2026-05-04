@@ -11,6 +11,9 @@ export default function HeroWork() {
 
       {/* Background Glow */}
       <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-white/10 to-transparent pointer-events-none z-0" />
+      
+      {/* Background Decoration - Glowing Oval behind images */}
+      <div className="absolute top-[40%] -translate-y-1/2 right-[-10%] w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-white opacity-40 blur-[160px] rounded-full pointer-events-none z-0"></div>
 
       <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start justify-between h-full relative z-10 gap-8">
 

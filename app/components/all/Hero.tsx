@@ -17,8 +17,16 @@ export default function Hero() {
           style={{ fontFamily: "var(--font-satoshi)" }}
         >
           Our Services
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 19L19 5M19 5V19M19 5H5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_6227_82053)">
+              <path d="M7.49985 22.5L22.4998 7.5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M10.3123 7.5H22.4998V19.6875" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_6227_82053">
+                <rect width="30" height="30" fill="white"/>
+              </clipPath>
+            </defs>
           </svg>
         </Link>
       </div>
@@ -104,8 +112,16 @@ export default function Hero() {
           }}
         >
           View Our Work
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 4V20M12 20L5 13M12 20L19 13" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_6227_82077)">
+              <path d="M21.2124 10.6068V31.82" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M29.8307 23.2017L21.2128 31.8195L12.595 23.2017" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_6227_82077">
+                <rect width="30" height="30" fill="white" transform="translate(42.4264 21.2134) rotate(135)"/>
+              </clipPath>
+            </defs>
           </svg>
         </a>
       </div>
