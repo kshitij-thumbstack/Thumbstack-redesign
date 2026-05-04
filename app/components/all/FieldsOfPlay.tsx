@@ -75,9 +75,10 @@ export default function FieldsOfPlay() {
         {/* We build the remarkable, not the routine */}
         <div className="lg:absolute lg:left-[104px] lg:top-[247px] mb-8 lg:mb-0">
           <p 
-            className="text-[#0F1D07] font-bold uppercase"
+            className="text-[#0F1D07] font-normal uppercase"
             style={{ 
               fontFamily: "var(--font-satoshi)", 
+              fontWeight: 400,
               fontSize: "11px", 
               lineHeight: "16px",
               width: "179px",

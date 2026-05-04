@@ -1,13 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 function StackCard({ item, idx }: { item: any; idx: number }) {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
   return (
     <div
       className={`flex flex-col gap-4 sm:gap-6 shrink-0 relative transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group/item
@@ -16,13 +14,6 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
           : 'w-[240px] sm:w-[320px] md:w-[480px] hover:w-[280px] sm:hover:w-[400px] md:hover:w-[639px]'
         }
       `}
-      onMouseMove={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        setMousePos({
-          x: e.clientX - rect.left,
-          y: e.clientY - rect.top
-        });
-      }}
     >
       {/* Card Image Container */}
       <div className={`relative rounded-lg sm:rounded-2xl md:rounded-[2rem] overflow-hidden group/card shadow-lg
@@ -42,24 +33,15 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
 
         {/* Logo Overlay */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 sm:w-24 md:w-32 lg:w-40 h-16 sm:h-24 md:h-32 lg:h-40 bg-white/95 rounded-lg sm:rounded-xl md:rounded-[1.5rem] shadow-2xl flex items-center justify-center p-3 sm:p-4 md:p-6 backdrop-blur-md">
-          <div className="text-sidebar font-black text-xs sm:text-sm md:text-xl lg:text-2xl tracking-tighter text-center italic font-serif">
-            {item.logo}
+          <div className="relative w-full h-full">
+            <Image
+              src={item.logo}
+              alt="Brand Logo"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
-
-        {/* Drag Indicator — Mouse Follow Interaction ── */}
-        {(idx === 2 || idx === 5) && (
-          <motion.div
-            animate={{
-              x: mousePos.x - 48, // Offset to center (approx for 24rem width)
-              y: mousePos.y - 48,
-              transition: { type: "spring", damping: 25, stiffness: 200 }
-            }}
-            className="absolute left-0 top-0 w-12 sm:w-16 md:w-24 h-12 sm:h-16 md:h-24 bg-[#A0E2D1]/90 rounded-full flex items-center justify-center text-sidebar font-bold text-xs sm:text-sm md:text-lg backdrop-blur-sm shadow-xl z-20 pointer-events-none"
-          >
-            Drag
-          </motion.div>
-        )}
       </div>
 
       {/* Card Content */}
@@ -93,11 +75,31 @@ function StackCard({ item, idx }: { item: any; idx: number }) {
 }
 
 export default function FromTheStack() {
+  const [isHovering, setIsHovering] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Motion values for smooth cursor tracking
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Smooth spring configuration
+  const springConfig = { damping: 25, stiffness: 200 };
+  const smoothX = useSpring(mouseX, springConfig);
+  const smoothY = useSpring(mouseY, springConfig);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - rect.left);
+      mouseY.set(e.clientY - rect.top);
+    }
+  };
+
   const stackItems = [
     {
       id: 1,
       image: "/stack1.png",
-      logo: "EMAANCE",
+      logo: "/TSP/logo 1.png",
       title: "Launch: Sunteck Realty Digital Showcase",
       description: "We transformed how a luxury real estate brand tells its story online — blending cinematic design with seamless performance.",
       tag: "Blog"
@@ -105,7 +107,7 @@ export default function FromTheStack() {
     {
       id: 2,
       image: "/stack2.png",
-      logo: "WESTSIDE",
+      logo: "/TSP/Group.png",
       title: "Launch: Sunteck Realty Digital Showcase",
       description: "We transformed how a luxury real estate brand tells its story online — blending cinematic design with seamless performance.",
       tag: "Article"
@@ -113,7 +115,7 @@ export default function FromTheStack() {
     {
       id: 3,
       image: "/stack3.jpg",
-      logo: "BRAND",
+      logo: "/TSP/logo-3.png",
       title: "Launch: Sunteck Realty Digital Showcase",
       description: "We transformed how a luxury real estate brand tells its story online — blending cinematic design with seamless performance.",
       tag: "Blog"
@@ -121,7 +123,13 @@ export default function FromTheStack() {
   ];
 
   return (
-    <section className="min-h-screen w-full flex flex-col justify-center items-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-24 snap-start relative bg-white border-t border-gray-100 overflow-hidden">
+    <section
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+      className="min-h-screen w-full flex flex-col justify-center items-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-24 snap-start relative bg-white border-t border-gray-100 overflow-hidden cursor-none"
+    >
       <div className="w-full max-w-[1400px] flex flex-col mb-8 sm:mb-12">
         <div className="flex flex-col md:flex-row justify-between items-start w-full gap-6 sm:gap-8">
           <div className="flex flex-col gap-3 sm:gap-4">
@@ -165,6 +173,21 @@ export default function FromTheStack() {
           ))}
         </div>
       </div>
+
+      {/* Global Drag Indicator */}
+      {isHovering && (
+        <motion.div
+          style={{
+            x: smoothX,
+            y: smoothY,
+            translateX: "-50%",
+            translateY: "-50%",
+          }}
+          className="fixed top-0 left-0 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-[#A0E2D1]/90 rounded-full flex items-center justify-center text-sidebar font-bold text-xs sm:text-sm md:text-lg backdrop-blur-sm shadow-xl z-[100] pointer-events-none"
+        >
+          Drag
+        </motion.div>
+      )}
     </section>
   );
 }
