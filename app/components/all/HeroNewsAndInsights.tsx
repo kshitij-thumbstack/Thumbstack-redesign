@@ -5,47 +5,62 @@ import Sidebar from "../layout/Sidebar";
 
 export default function HeroNewsAndInsights() {
   return (
-    <section className="min-h-[130vh] w-full flex flex-col justify-start py-12 px-6 md:px-12 lg:px-24 snap-start relative bg-[#3145DD] md:pl-[90px] overflow-hidden pt-80 md:pt-[55vh]">
+    <section className="min-h-[100svh] w-full flex flex-col justify-start items-center pt-40 md:pt-64 pb-20 md:pb-32 px-8 lg:px-24 snap-start relative bg-[#3145DD] overflow-hidden">
       <Sidebar />
 
       {/* Background Decoration - Glowing Oval */}
       <div className="absolute top-1/2 -translate-y-1/2 right-0 md:right-[5%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-white opacity-40 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
       <div className="w-full max-w-[1400px] mx-auto flex flex-col gap-12 sm:gap-16 relative z-10">
-        {/* Top row */}
-        <div className="flex justify-between items-start w-full">
-          <Link href="#" className="text-white font-medium text-xs md:text-sm flex items-center gap-2 hover:opacity-75 transition-opacity" style={{ fontFamily: "var(--font-satoshi)" }}>
+        {/* Main typography */}
+        <div className="flex flex-col relative z-10 mt-12 md:mt-20">
+          <Link 
+            href="#" 
+            className="text-white font-medium flex items-center gap-2 hover:opacity-75 transition-opacity mb-8 md:mb-12" 
+            style={{ fontFamily: "var(--font-satoshi)", fontSize: "15px" }}
+          >
             Let&apos;s Build Together
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-[2px]">
-              <path d="M5 19L19 5M19 5V19M19 5H5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clipPath="url(#clip0_6227_88259)">
+                <path d="M5 15L15 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6.875 5H15V13.125" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_6227_88259">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
             </svg>
           </Link>
-        </div>
 
-        {/* Main typography */}
-        <div className="flex flex-col gap-8 relative z-10">
-          <h1
-            className="text-white tracking-tighter max-w-[1200px]"
-            style={{
-              fontFamily: "var(--font-delight)",
-              fontWeight: 600,
-              fontSize: "clamp(2.5rem, 8vw, 114.45px)",
-              lineHeight: "clamp(3rem, 10vw, 143.07px)",
-              letterSpacing: "-2%",
-              verticalAlign: "middle"
-            }}
-          >
-            Ideas, News & Notes<br />
-            From The Studio.
-          </h1>
+          <div className="flex flex-col gap-[60px] md:gap-[80px]">
+            <h1
+              className="text-white tracking-[-0.04em] max-w-[1200px]"
+              style={{
+                fontFamily: "var(--font-delight)",
+                fontWeight: 600,
+                fontSize: "clamp(3rem, 10vw, 130px)",
+                lineHeight: "1.1",
+                verticalAlign: "middle"
+              }}
+            >
+              Ideas, News & Notes<br />
+              From The Studio.
+            </h1>
 
-          <p
-            className="text-white/60 text-sm md:text-base max-w-xl leading-relaxed"
-            style={{ fontFamily: "var(--font-satoshi)", fontWeight: 700 }}
-          >
-            We document what we learn — from design sprints to engineering breakthroughs,
-            new project launches, experiments, and small discoveries that move our work forward.
-          </p>
+            <p
+              className="text-white leading-[28px]"
+              style={{ 
+                fontFamily: "var(--font-satoshi)", 
+                fontWeight: 700,
+                fontSize: "14px",
+                maxWidth: "465px"
+              }}
+            >
+              We document what we learn — from design sprints to engineering breakthroughs,
+              new project launches, experiments, and <br /> small discoveries that move our work forward.
+            </p>
+          </div>
         </div>
       </div>
     </section>
